@@ -1,0 +1,25 @@
+.topofpage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.textmenu {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 105px;
+    width: 105px;
+}
+
+.logoandname{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
