@@ -5,8 +5,58 @@
     ),url("../img/teddy-roosevelt.jpg");
     background-position: center;
     background-size: cover;
+    /*animation: ease-in 2s;*/
 }
 
+#usnagrad {
+    animation: expand .5s;
+}
+#swo {
+    animation: expand 1s;
+}
+#codeup {
+    animation: expand 1.5s;
+}
+
+/*#usnagrad, #swo, #codeup {*/
+/*    box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fa-linkedin {
+    color: #0a66c2
+}
+
+.fa-github-square {
+    color: black;
+}
+
+.fa-laptop-code {
+    color: black;
+}
+
+.fa-envelope-open {
+    color: #c5221e;
+}
+
+.fa-lock {
+    color: #505061;
+}
+
+/*.firstcircle {*/
+/*    background-image: usna-seal.png;*/
+/*}*/
 
 /*.text {*/
 /*    background: inherit;*/

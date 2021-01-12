@@ -6,3 +6,23 @@
     background-position: center;
     background-size: cover;
 }
+
+.fa-linkedin {
+    color: #0a66c2
+}
+
+.fa-github-square {
+    color: black;
+}
+
+.fa-laptop-code {
+    color: black;
+}
+
+.fa-envelope-open {
+    color: #c5221e;
+}
+
+.fa-lock {
+    color: #505061;
+}
