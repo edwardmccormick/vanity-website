@@ -1,4 +1,177 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Abel;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/*hr {*/
+/*    display: ;*/
+
+/*}*/
+
+h1 {
+    font-family: Anton;
+    font-size: 64px;
+}
+
+h2 {
+    font-family: Anton;
+    font-size: 48px;
+}
+
+h3 {
+    font-family: Anton;
+    font-size: 40px;
+}
+
+h4 {
+    font-family: Anton;
+    font-size: 32px;
+}
+
+h5 {
+    font-family: Anton;
+    font-size: 28px;
+}
+
+h6 {
+    font-family: Anton;
+}
+
+
+
 .codeup {
     width: 105px;
     height: 105px;
+    position: absolute;
+    top: 25px;
+    left: calc(50% - 52px);
 }
+
+.codeup2 {
+    width: 105px;
+    height: 105px;
+}
+
+.whitebar {
+    height: 50px;
+    background-color: #ffffff;
+    margin: 0 -9999rem;
+    /* add back negative margin value */
+    padding: 0.25rem 9999rem;
+}
+
+/*.navbar {*/
+/*    background-color: #f0f0f0;*/
+/*    height: 50px;*/
+/*}*/
+
+.buffer {
+    height: 50px;
+    /*background-color: red;*/
+}
+
+.navbar {
+
+    top: 20px;
+}
+
+.maintitle {
+    font-family: Abel;
+}
+
+.maintitle2 {
+    font-family: Abel;
+    white-space: nowrap;
+}
+
+.menuitems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoandname {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.firstmenu {
+    position: static;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    /*max-width: 380px;*/
+    align-self: center;
+}
+
+
+.buttons-bar{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.button-big {
+    height: 105px;
+    width: 105px;
+    border: 5px solid #ffffff;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.button-little {
+    font-family: Anton;
+    height: 18px;
+    width: 18px;
+    font-size: 8px;
+    font-weight: bold;
+    border: none;
+}
+
+.design {
+    background-color: #e6563b;
+}
+
+.develop {
+    background-color: #eb9d3a;
+}
+
+.support {
+    background-color: #7cb06c;
+}
+
+.host {
+    background-color: #00aba9;
+}
+
+.image {
+    border: 5px solid #e6e6e6;
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.sm-image {
+    border: 2px solid #e6e6e6;
+}
+
+.fa-twitter {
+    color: #50abf1;
+    font-size: larger;
+}
+
+.twitter>p {
+    font-size: smaller;
+}
+
+.wholepage {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/*.projects {*/
+/*    max-width: 1000px;*/
+/*    margin: 0 auto;*/
+/*}*/
