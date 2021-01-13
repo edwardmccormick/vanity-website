@@ -46,3 +46,15 @@
 .fa-lock {
     color: #505061;
 }
+
+.fa-file-pdf {
+    color: #ad0b00
+}
+
+.fa-file-word {
+    color: #274f90
+}
+
+.fa-file-word:hover, .fa-file-pdf:hover {
+    color: black
+}

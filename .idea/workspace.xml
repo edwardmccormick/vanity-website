@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb6539f2-6067-4ed1-a768-cc94bb22a86f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Edward.McCormick.Resume.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/resume.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/coffeeproject_cropped.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/weathermap_cropped.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/wireframe_cropped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Edward McCormick.resume.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$ward McCormick.resume.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/pairs-programming-bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/pairs-programming-bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/resume.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/resume.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/resume.html" afterDir="false" />
     </list>
@@ -80,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610241360433</updated>
-      <workItem from="1610241362425" duration="32177000" />
+      <workItem from="1610241362425" duration="36058000" />
     </task>
     <servers />
   </component>
