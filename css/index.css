@@ -18,6 +18,9 @@
 #codeup {
     animation: expand 1.5s;
 }
+#carouselExampleControls {
+    animation: expand 3s;
+}
 
 /*#usnagrad, #swo, #codeup {*/
 /*    box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.3);*/
@@ -34,6 +37,7 @@
         transform: scale(1);
     }
 }
+
 
 .fa-linkedin {
     color: #0a66c2
