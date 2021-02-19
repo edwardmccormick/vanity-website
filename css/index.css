@@ -9,6 +9,19 @@
     font-family: 'Playfair Display SC', Serif;
 }
 
+.rounded {
+    /*min-width: 320px;*/
+    max-width: 777px;
+    max-height: 600px;
+    margin: auto;
+}
+
+.carousel {
+    min-width: 320px;
+    max-height: 600px; !important;
+    max-width: 777px;
+}
+
 #usnagrad {
     animation: expand .5s;
 }
