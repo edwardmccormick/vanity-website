@@ -9,14 +9,31 @@
     font-family: 'Playfair Display SC', Serif;
 }
 
+#firstcircle, #secondcircle, #thirdcircle {
+    border-radius: 50% !important;
+}
+
+.carouseled {
+    /*min-width: 320px;*/
+    max-width: 777px;
+    max-height: 600px !important;
+    margin: auto;
+}
+
+.carousel {
+    min-width: 320px;
+    max-height: 600px !important;
+    max-width: 777px;
+}
+
 #usnagrad {
-    animation: expand .5s;
+    animation: expand 3.5s;
 }
 #swo {
-    animation: expand 1s;
+    animation: expand 4s;
 }
 #codeup {
-    animation: expand 1.5s;
+    animation: expand 4.5s;
 }
 #carouselExampleControls {
     animation: expand 3s;
