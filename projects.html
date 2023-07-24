@@ -5,95 +5,160 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
     <!--    Custom CSS-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <!--    The Tailwind Output File-->
+    <link rel="stylesheet" href="css/output.css">
 
-    <title>Ted McCormick - Full Stack Developer</title><script src="js/main.js"></script>
-
+    <title>Ted McCormick - Full Stack Developer</title>
+    <script src="js/index.js"></script>
 
 </head>
-<body>
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Edward C. "Ted" McCormick</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home </a>
-            </li>
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link" href="skills.html">Skills</a>-->
-            <!--            </li>-->
-            <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resume</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="projects.html">Projects <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+<body class="min-h-screen">
 
-        </ul>
-        <span class="navbar-text d-none d-md-inline">
-      Full-stack web developer
-    </span>
+<nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="mobileToggle()">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Icon when menu is closed.
+
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+                      Icon when menu is open.
+
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex flex-shrink-0 items-center">
+                    <img class="h-8 w-auto" src="img/devops-infinity-smallest.png" alt="DevOps Logo">
+                </div>
+                <div class="flex flex-shrink-0 items-center hidden min-[300px]:flex md:hidden">
+                    <span class="text-gray-100 text-sm align-item-center">Ted McCormick</span>
+                </div>
+                <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Resume</a>
+                        <a href="projects.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Projects</a>
+                        <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <span class="text-gray-100 text-sm hidden md:inline">Edward C. &quot;Ted&quot; McCormick</span>
+            </div>
+            <!--                <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">-->
+            <!--                    <span class="sr-only">View notifications</span>-->
+            <!--                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">-->
+            <!--                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />-->
+            <!--                    </svg>-->
+            <!--                </button>-->
+
+            <!-- Profile dropdown -->
+            <div class="relative ml-3">
+                <div>
+                    <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-expanded="false" aria-haspopup="true" onclick="contactToggle()">
+                        <span class="sr-only">Open contact list</span>
+                        <img class="h-8 w-8 rounded-full" src="img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick">
+                    </button>
+                </div>
+
+                <!--
+                  Dropdown menu, show/hide based on menu state.
+
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+                <div class="hidden absolute right-0 z-10 mt-2 w-55 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" id="contactMenu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                    <!-- Active: "bg-gray-100", Not Active: "" -->
+
+                    <p><a href="https://www.linkedin.com/in/ted-mccormick/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-0" target="_blank">
+                        LinkedIn
+                        <img class="h-5 w-5 inline" src="img/LI-In-Bug.png" alt="The LinkedIn Logo"> </a>
+                    </p>
+                    <a href="https://github.com/edwardmccormick" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-1" target="_blank">
+                        Github <img class="h-5 w-5 inline" src="img/github-mark.svg" alt="The GitHub Logo">
+                    </a>
+
+                    <a href="tel:2108236753" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-2" target="_blank">Cell: (210) 823-6753</a>
+                    <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black tooltip"  role="menuitem" tabindex="-1"  id="user-menu-item-3" onclick="copyEmail()" onmouseout="outFunc(this)"><span class="tooltiptext" id="emailTooltip">Copy to clipboard</span>nickname.lastname@gmail.com</button>
+                    <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black tooltip"  role="menuitem" tabindex="-1"  id="user-menu-item-4" onclick="copyEmailSecure()" onmouseout="outFunc(this)"><span class="tooltiptext" id="secureEmailTooltip">Copy to clipboard</span>nickname.lastname@protonmail.com</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
+            <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Resume</a>
+            <a href="projects.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+            <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+        </div>
     </div>
 </nav>
+
+<main class="max-w-7xl xl:mx-auto">
 <div class="d-flex flex-column flex-md-row justify-content-between">
     <div class="m-1 p-3 text-center text-md-left">
         <h1>Take a look at what I've done.</h1>
 
-        <p>These projects cover a lot of ground - both in content and technology used. Feel free to take a look at all of them.</p>
+        <p>These projects cover a lot of ground - both in content and technology used. Of course if you'd like to know more about any of them, <a href="contact.html">out and ask.</a>\
+            /p>
     </div>
 
 
 </div>
 
-<!--<div class="jumbotron jumbotron-fluid p-0 bg-dark Teddy">-->
-<!--    <div class="container quote">-->
-<!--        <h1 class="display-4 text text-white">"It is not the critic who counts...</h1>-->
-<!--        <p class="lead text text-white">...not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat.”</p>-->
-<!--        <h4 class="text-right text-white">Theodore Roosevelt,<br> April 23, 1910</h4>-->
-<!--    </div>-->
-<!--</div>-->
-
-<main role="main">
-
-<div class="container">
+    <div class="container mx-auto sm:px-4">
         <hr class="featurette-divider">
 
-        <div class="row featurette" id="weathermap">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Mapbox and Openweather. <span class="text-muted">Two great APIs that taste better together.</span></h2>
-                <p class="lead">This is a fully responsive, fully interactive, mobile responsive Javascript app - it even has a hand-coded autocomplete function on the search bar. It uses jQuery, Bootstrap, AJAX, vanilla Javascript, and CSS and HTML.</p>
-                <div class="text-center"><a href="https://github.com/edwardmccormick/codeup-web-exercises/blob/main/weather_map.html" target="_blank"><button type="button" class="btn btn-dark m-1">See the code</button></a><a href="http://tedmccormick.familyds.com/weather_map.html" target="_blank"><button type="button" class="m-1 btn btn-dark">See it live!</button></a></div>
+        <div class="flex flex-wrap  featurette" id="weathermap">
+            <div class="md:w-3/5 pr-4 pl-4">
+                <h2 class="featurette-heading">Mapbox and Openweather. <span class="text-gray-700">Two great APIs that taste better together.</span></h2>
+                <p class="text-xl font-light">This is a fully responsive, fully interactive, mobile responsive Javascript app - it even has a hand-coded autocomplete function on the search bar. It uses jQuery, Bootstrap, AJAX, vanilla Javascript, and CSS and HTML.</p>
+                <div class="text-center"><a href="https://github.com/edwardmccormick/codeup-web-exercises/blob/main/weather_map.html" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="http://tedmccormick.familyds.com/weather_map.html" target="_blank"><button type="button" class="m-1 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900">See it live!</button></a></div>
             </div>
-            <div class="col-md-5">
-                <img src="img/weathermap.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <div class="md:w-2/5 pr-4 pl-4">
+                <img src="img/weathermap.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
 
             </div>
         </div>
         <hr class="featurette-divider">
-        <div class="row featurette" id="moviedatabase">
-            <div class="col-md-5 order-2 order-md-1">
-                <img src="img/movie.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" id='' aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <div class="flex flex-wrap  featurette" id="moviedatabase">
+            <div class="md:w-2/5 pr-4 pl-4 order-2 md:order-1">
+                <img src="img/movie.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" id='' aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
 
             </div>
-            <div class="col-md-7 order-1 order-md-2">
-                <h2 class="featurette-heading">A media-front end, ready to integrate with a player. <span class="text-muted">Mobile responsive, modern, and interactive. Just add movies!</span></h2>
-                <p class="lead">Another pairs programming project using multiple APIs to communicate with a private server and complete details of entries from a public server. </p>
-                <div class="text-center"><a href="https://github.com/Joshua-and-Ted-Kalypso-Movie-Project/movie-database-pairs-programming" target="_blank"><button type="button" class="btn btn-dark m-1">See the code</button></a><a href="movies"><button type="button" class="btn btn-dark m-1" target="_blank">See it live!</button></a></div>
+            <div class="md:w-3/5 pr-4 pl-4 order-1 md:order-2">
+                <h2 class="featurette-heading">A media-front end, ready to integrate with a player. <span class="text-gray-700">Mobile responsive, modern, and interactive. Just add movies!</span></h2>
+                <p class="text-xl font-light">Another pairs programming project using multiple APIs to communicate with a private server and complete details of entries from a public server. </p>
+                <div class="text-center"><a href="https://github.com/Joshua-and-Ted-Kalypso-Movie-Project/movie-database-pairs-programming" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="movies"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1" target="_blank">See it live!</button></a></div>
             </div>
 
         </div>
@@ -101,64 +166,61 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette" id="coffeeproject">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">How about a nice hot cup of coffee? <span class="text-muted">A responsive, interactive, Javascript web app.</span></h2>
-                <p class="lead">This is a pairs-programmed vanilla Javascript app that has a ton of functionality and even allows the user to add to the database and display. It's lovingly hand-coded with HTML, CSS, Bootstrap, and even touches a bit of LocalStorage and file permanence.</p>
-                <div class="text-center"><a href="https://github.com/Jeremiah-and-Ted-Kalypso/coffee-project" target="_blank"><button type="button" class="btn btn-dark m-1 ">See the code</button></a><a href="coffee.html" target="_blank"><button type="button" class="m-1 btn btn-dark">See it live!</button></a></div>
+        <div class="flex flex-wrap  featurette" id="coffeeproject">
+            <div class="md:w-3/5 pr-4 pl-4">
+                <h2 class="featurette-heading">How about a nice hot cup of coffee? <span class="text-gray-700">A responsive, interactive, Javascript web app.</span></h2>
+                <p class="text-xl font-light">This is a pairs-programmed vanilla Javascript app that has a ton of functionality and even allows the user to add to the database and display. It's lovingly hand-coded with HTML, CSS, Bootstrap, and even touches a bit of LocalStorage and file permanence.</p>
+                <div class="text-center"><a href="https://github.com/Jeremiah-and-Ted-Kalypso/coffee-project" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1 ">See the code</button></a><a href="coffee.html" target="_blank"><button type="button" class="m-1 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900">See it live!</button></a></div>
             </div>
-            <div class="col-md-5">
-                <img src="img/coffeeproject.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false">
-
-            </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette" id="wireframe">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">And lastly, a beautiful, responsive home page mockup. <span class="text-muted">Built off wireframes, ready to be brought live.</span></h2>
-                <p class="lead">Another pairs programming project built with Bootstrap, CSS, and HTML. </p>
-                <div class="text-center"><a href="https://github.com/Natalie-E-and-Ted-M/pairs-programming-bootstrap" target="_blank"><button type="button" class="btn btn-dark m-1">See the code</button></a><a href="pairs-programming-bootstrap.html"><button type="button" class="btn btn-dark m-1" target="_blank">See it live!</button></a></div>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <img src="img/wireframe.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" id='' aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <div class="md:w-2/5 pr-4 pl-4">
+                <img src="img/coffeeproject.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false">
 
             </div>
         </div>
 
         <hr class="featurette-divider">
 
+        <div class="flex flex-wrap  featurette" id="wireframe">
+            <div class="md:w-3/5 pr-4 pl-4 md:order-2">
+                <h2 class="featurette-heading">And lastly, a beautiful, responsive home page mockup. <span class="text-gray-700">Built off wireframes, ready to be brought live.</span></h2>
+                <p class="text-xl font-light">Another pairs programming project built with Bootstrap, CSS, and HTML. </p>
+                <div class="text-center"><a href="https://github.com/Natalie-E-and-Ted-M/pairs-programming-bootstrap" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="pairs-programming-bootstrap.html"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1" target="_blank">See it live!</button></a></div>
+            </div>
+            <div class="md:w-2/5 pr-4 pl-4 md:order-1">
+                <img src="img/wireframe.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" id='' aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+    </div>
     </div>
     </div>
 </main>
 
 
-<footer>
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-        <p>Everything here is &copy; 2021 by Edward C. "Ted" McCormick, all rights reserved.</p>
-
-        <div class="column m-1 p-1 text-center d-flex flex-column">
-            <div class="d-flex justify-content-between">
-                <div><i class="far fa-envelope-open"></i>Email: nickname.lastname@gmail.com</div>
-                <div><i class="fas fa-lock"></i>Secure: nickname.lastname@protonmail.com</div>
-                <div><a href="http://tedmccormick.familyds.com/"><i class="fas fa-laptop-code"></i>Interactive Portfolio</a></div>
-                <div><i class="fas fa-phone"></i>Phone: 210-823-6753</div>
-            </div>
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-end">       <div class="col-4"><a href="https://www.linkedin.com/in/ted-mccormick/"><i class="fab fa-linkedin"></i>LinkedIn</a></div>
-                <div class="col-4"><a href="https://github.com/edwardmccormick"><i class="fab fa-github-square"></i>Github</a></div>
-                <div class="col-4"><a href="https://twitter.com/ted_codes"><i class="fab fa-twitter-square"></i>Twitter </a></div> </div>
-
-        </div>
+<footer class="text-gray-800 bg-gray-300 body-font sticky top-[100vh]">
+    <!--    <div class="grid grid-cols-4 mx-4 mt-4 p-4">-->
+    <!--       <div class="col-span-2">-->
+    <!--           <div class="flex flex-row justify-center"><img class="h-8 w-8 rounded-full" src="img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick">-->
+    <!--           </div>-->
+    <div class="text-center h-10">
+        <p class="text-sm p-4">Everything here is © 2021 by Edward C. "Ted" McCormick, all rights reserved.</p>
     </div>
+    <!--    </div>-->
+    <!--    <div class="flex flex-row justify-end">-->
+    <!--        <a href="https://www.linkedin.com/in/ted-mccormick/"><img class="h-10 w-10 inline" src="img/LI-In-Bug.png" alt="The LinkedIn Logo">LinkedIn</a>-->
+    <!--    </div>-->
+    <!--    <div class="flex flex-row justify-end"><a href="https://github.com/edwardmccormick"><img class="h-10 w-10 inline" src="img/github-mark.svg" alt="The Github Logo">Github</a>-->
+    <!--    </div>-->
+    <!--    </div>-->
+
     <!--                <p>But everything here is available for inspection or to modify and make your own - check out <a href="https://github.com/edwardmccormick"><i class="fab fa-github-square"></i> my Github</a> for more.</p>-->
 
     <!--                <p>All servicemarks, trademarks, and logos are used without permission of the trademark or rights holders. No infringement on any claim of their rights intended.</p>-->
 
-    <!--                <div class="d-flex flex-row justify-content-around flex-wrap">-->
+    <!--                <div class="flex flex-row justify-around flex-wrap">-->
     <!--                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" height="50px">-->
     <!--                    <img src="img/jquery-vertical.svg" height="50px">-->
     <!--                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/IntelliJ_IDEA_Logo.svg" height="50px">-->
@@ -167,42 +229,6 @@
     <!--                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" height="50px">-->
     <!--                </div></div>-->
 </footer>
-</div>
-<!--<p>Nothing on this website should break your web browser, but in many cases the 'exciting part' is happening either in your Javascript Console or a CSS page. Proceed at your own discretion.</p>-->
-<!--<p>These links are unordered - the first fifteen or so are haphazard from the first 5 weeks of the bootcamp I'm in, the rest I will <s>probably forget to</s> add mostly as we complete them.</p>-->
 
-<!--<ul>-->
-<!--    <li><a href="conditionals.html">This is mostly Javascript i.e. nothing to see, really.</a></li>-->
-<!--    <li><a href="functions_js.html">Yeah, almost 100% JS. Check the console if you know how?</a> </li>-->
-<!--    <li><a href="iterating_arrays_js.html">Almost all Javascript.</a></li>-->
-<!--    <li><a href="planets_js.html">The same, but with planets.</a> </li>-->
-<!--    <li><a href="split-join.html">The same, but splitting and joining arrays.</a> </li>-->
-<!--    <li><a href="objects.html">The same, but objects.</a> </li>-->
-<!--    <li><a href="loops.html">Same here. Loops will, only about 25% of the time, crash your browser if I write them wrong.</a> </li>-->
-<!--    <li><a href="login-form.html">A login form (that doesn't submit)</a>. Although I did a little extra on this one and kind of like it, so take that with a grain of salt. </li>-->
-<!--    <li><a href="welcome.html">A welcome page?</a> This one is actually kind of nice - the color palette is a little strange, but it's like the 1998 Internet came back around. I'm pretty sure there's fairly minimal CSS here.</li>-->
-<!--    <li><a href="css_selectors.html">Let there be COLORS!</a> </li>-->
-<!--    <li><a href="messages.html">This is just messages.</a> There's not anything that like, makes them come up or anything - it was just to practice styling them.</li>    <li><a href="flexbox-fundamentals-exercises.html"> This one is actually a little responsive.</a> Try resizing your window to see how it responds. Or look it up on mobile, I guess? Seems like a lot of work to enjoy it though.</li>-->
-<!--    <li><a href="github.html">I guess we made Github?</a> </li>-->
-<!--    <li><a href="twitter.html">And then we made Twitter</a> </li>-->
-<!--    <li><a href="flex-form.html">A form in flexbox?</a> I'll be honest, I'm not entirely sure what this one is for. But it has a puppy playing on the beach, so that's cool.</li>-->
-<!--    <li><a href="flexbox-nav-exercise.html">I honestly didn't remember this one.</a> It's an...ugly, non-functional navbar. But it is responsive.</li>-->
-<!--    <li><a href="forms.html">Forms. That lead to nowhere.</a> I actually kind of have a soft spot for this one - it's got some nice styling to it and an animated submit button and a neat 'password reveal' function. One of my early, simple favorites.</li>-->
-<!--    <li><a href="bootstrap-resume.html">It's a responsive resume.</a> Not mine (yet) but again, change the size of your browser window and see it adjust. I am moderately proud of this one.</li>-->
-<!--    <li><a href="order-pizza.html">It's a pizza order form</a>, done almost entirely in Bootstrap, and honestly, I'm pretty proud of this one. It doesn't submit but has some fun features (like a login on the menu bar). It's also responsive - change your browser and watch it adjust.</li>-->
-<!--    <li><a href="pairs-programming-bootstrap.html">I'm actually pretty proud of this one.</a> It's a responsive (i.e. shrinks down for mobile, expands for desktop) page I built with a partner from wireframes. None of it is functional, but it's <em>very</em> pretty and kind of technically cool too. A fair bit of Bootstrap, with CSS for specific styling and few technical details.</li>-->
-<!--    <li><a href="defuse-the-bom.html">This is kind of a weird little game.</a> I like it because it uses Javascript to rewrite the HTML (and add time to a timer) but it's not exactly revolutionary.</li>-->
-<!--    <li><a href="dom-query-js.html">Look, rewriting css styles with Javascript isn't sexy.</a> The buttons are kind of cool though - my first real experience playing with JS/HTML/CSS integration.</li>-->
-<!--    <li><a href="weather_map.html">This is actually a project that I'm very proud of</a>: it's a map that also pulls up the five days forecast for any location you pull up. Check it out!</li>-->
-<!--</ul>-->
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.x-git.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-<!--Font Awesome, for icons - although not necessary to use bootstrap.-->
-<script src="https://kit.fontawesome.com/d97a27eb03.js" crossorigin="anonymous"></script>
-<!--Custom JS-->
-<script src="js/index.js"></script>
 </body>
 </html>
