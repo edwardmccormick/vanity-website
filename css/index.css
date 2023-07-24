@@ -1,3 +1,5 @@
+@tailwind base;
+
 body {
     font-family: 'Arimo', sans-serif;
 }
@@ -6,52 +8,60 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
 }
 
-.Teddy {
+@tailwind components;
+
+
+@tailwind utilities;
+
+
+
+/*#contactMenu  {*/
+/*    transition: ease-out duration-100;*/
+/*    transform: opacity-0 scale-95;*/
+/*    To: "transform opacity-100 scale-100"*/
+/*    Leaving: "transition ease-in duration-75"*/
+/*    From: "transform opacity-100 scale-100"*/
+/*    To: "transform opacity-0 scale-95"*/
+/*}*/
+
+.sharebtn {
+     @apply relative flex z-10 bg-white border rounded-md p-2 opacity-50 hover:opacity-100 focus:outline-none focus:border-blue-400;
+}
+
+.sharebtn:hover + .sharebtn-dropdown,
+.sharebtn:focus + .sharebtn-dropdown {
+    display: block;
+}
+
+.sharebtn-dropdown {
+     @apply absolute right-0 mt-0 w-48 bg-white rounded-sm overflow-hidden shadow-lg z-20 hidden border border-gray-100;
+}
+
+.JPJ {
     background-image: linear-gradient(
             rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 0.7)
-    ),url("../img/teddy-roosevelt.jpg");
+    ),url("../img/john-jaul-jones.jpg");
     background-position: center;
     background-size: cover;
-    /*animation: ease-in 2s;*/
-    font-family: 'Playfair Display SC', Serif;
 }
 
-
-#firstcircle, #secondcircle, #thirdcircle {
-    border-radius: 50% !important;
+.GWR {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+    ),url("../img/georgewromney.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
-.carouseled {
-    /*min-width: 320px;*/
-    max-width: 777px;
-    max-height: 600px !important;
-    margin: auto;
+.bd-placeholder-img {
+    max-height: 400px;
 }
 
-.carousel {
-    min-width: 320px;
-
-    max-height: 600px !important;
-    max-width: 777px;
+.card-text {
+    text-align: justify;
 }
-
-#usnagrad {
-    animation: expand 3.5s;
-}
-#swo {
-    animation: expand 4s;
-}
-#codeup {
-    animation: expand 4.5s;
-}
-/*#carouselExampleControls {*/
-/*    animation: expand 3s;*/
-/*}*/
-
-/*#usnagrad, #swo, #codeup {*/
-/*    box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.3);*/
-/*}*/
 
 @keyframes expand {
     0% {
@@ -65,45 +75,42 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
-.fa-linkedin {
-    color: #0a66c2
+.tooltip {
+    position: relative;
+    display: inline-block;
 }
 
-.fa-github-square {
-    color: black;
+.tooltip .tooltiptext {
+    visibility: hidden;
+    /*width: 140px;*/
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -125px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-.fa-laptop-code {
-    color: black;
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
-.fa-envelope-open {
-    color: #c5221e;
-}
-
-.fa-lock {
-    color: #505061;
-}
-
-.fa-file-pdf {
-    color: #ad0b00
-}
-
-footer {
-    color: white;
-    background-color: navy;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0 , 0, 0, 0.3)),
-    url("../img/waterbackground.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-}
-
-footer a {
-    color: white;
-    text-decoration: underline;
-    text-decoration-color: aliceblue;
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 /*.firstcircle {*/

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .GWR {
     background-image: linear-gradient(
             rgba(0, 0, 0, 0.7),
