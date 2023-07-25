@@ -5,49 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb6539f2-6067-4ed1-a768-cc94bb22a86f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/pipeline.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static-website-cloudformation.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cover/puppiness.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cover/puppiness.ogv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cover/puppiness.webm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/contact.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/flex-form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/forms.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/jquery_faq.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/media-queries.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/order-pizza.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/resume.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sandbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/twitter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/AnnapolisGraduation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/blue abstract background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/pexels-photo-1181622.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/pexels-photo-434551.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/pexels-photo-5054213.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/pexels-photo-848573.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/pizza.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/veridianlogo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/break_and_continue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/conditionals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/for_loops.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/forms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/iterating.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery_faq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/objects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/order-pizza.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/planets-array.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/planets-string.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/while.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static-website-cloudformation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/static-website-cloudformation.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,17 +74,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.projects.html">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="contact.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vanity-website/contact.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -181,7 +129,8 @@
       <workItem from="1620790540440" duration="6649000" />
       <workItem from="1689703205142" duration="7474000" />
       <workItem from="1690060607877" duration="55534000" />
-      <workItem from="1690241033508" duration="14296000" />
+      <workItem from="1690241033508" duration="15104000" />
+      <workItem from="1690302537995" duration="940000" />
     </task>
     <servers />
   </component>
