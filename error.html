@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!--    Custom CSS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Roboto&display=swap" rel="stylesheet">
+  <link href="css/output.css" rel="stylesheet">
+
+  <title>Ted McCormick - Software Developer / DevOps Engineer / Cloud Architect</title>
+  <script src="js/index.js"></script>
+
+</head>
+
+<body class="min-h-screen">
+
+<nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="mobileToggle()">
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex flex-shrink-0 items-center">
+          <img class="h-8 w-auto" src="img/devops-infinity-smallest.png" alt="DevOps Logo">
+        </div>
+        <div class="flex flex-shrink-0 items-center hidden min-[300px]:flex md:hidden">
+          <span class="text-gray-100 text-sm align-item-center">Ted McCormick</span>
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+            <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Resume</a>
+            <a href="projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+            <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <span class="text-gray-100 text-sm hidden md:inline">Edward C. &quot;Ted&quot; McCormick</span>
+      </div>
+      <!--                <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">-->
+      <!--                    <span class="sr-only">View notifications</span>-->
+      <!--                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">-->
+      <!--                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />-->
+      <!--                    </svg>-->
+      <!--                </button>-->
+
+      <!-- Profile dropdown -->
+      <div class="relative ml-3">
+        <div>
+          <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-expanded="false" aria-haspopup="true" onclick="contactToggle()">
+            <span class="sr-only">Open contact list</span>
+            <img class="h-8 w-8 rounded-full" src="img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick">
+          </button>
+        </div>
+
+        <!--
+          Dropdown menu, show/hide based on menu state.
+
+          Entering: "transition ease-out duration-100"
+            From: "transform opacity-0 scale-95"
+            To: "transform opacity-100 scale-100"
+          Leaving: "transition ease-in duration-75"
+            From: "transform opacity-100 scale-100"
+            To: "transform opacity-0 scale-95"
+        -->
+        <div class="hidden absolute right-0 z-10 mt-2 w-55 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" id="contactMenu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+          <!-- Active: "bg-gray-100", Not Active: "" -->
+
+          <p><a href="https://www.linkedin.com/in/ted-mccormick/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-0" target="_blank">
+            LinkedIn
+            <img class="h-5 w-5 inline" src="img/LI-In-Bug.png" alt="The LinkedIn Logo"> </a>
+          </p>
+          <a href="https://github.com/edwardmccormick" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-1" target="_blank">
+            Github <img class="h-5 w-5 inline" src="img/github-mark.svg" alt="The GitHub Logo">
+          </a>
+
+          <a href="tel:2108236753" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-2" target="_blank">Cell: (210) 823-6753</a>
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black tooltip"  role="menuitem" tabindex="-1"  id="user-menu-item-3" onclick="copyEmail()" onmouseout="outFunc(this)"><span class="tooltiptext" id="emailTooltip">Copy to clipboard</span>nickname.lastname@gmail.com</button>
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black tooltip"  role="menuitem" tabindex="-1"  id="user-menu-item-4" onclick="copyEmailSecure()" onmouseout="outFunc(this)"><span class="tooltiptext" id="secureEmailTooltip">Copy to clipboard</span>nickname.lastname@protonmail.com</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
+      <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Resume</a>
+      <a href="projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+      <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+<main class="container m-6 p-8 flex">
+  <img src="img/tedProfilePicture.jpg" class="inline-block rounded-lg" alt="Ted McCormick's profile picture.">
+  <div><h1 class="text-4xl">Well that's weird.</h1>
+
+  <h4 class="text-med">Which would be worse, if I messed something up or if you were trying to break things?</h4>
+
+  <p class="text-base">Well either way, there's not much going on here. Maybe check out <a href="index.html" class="text-blue-600 dark:text-blue-500 hover:underline">my home page</a>? Or if I messed something up, please <a href="contact.html" class="text-blue-600 dark:text-blue-500 hover:underline">contact me</a> so I can fix it.</p>
+  </div>
+</main>
+
+<footer class="text-gray-800 bg-gray-300 body-font sticky top-[100vh]">
+  <!--    <div class="grid grid-cols-4 mx-4 mt-4 p-4">-->
+  <!--       <div class="col-span-2">-->
+  <!--           <div class="flex flex-row justify-center"><img class="h-8 w-8 rounded-full" src="img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick">-->
+  <!--           </div>-->
+  <div class="text-center h-10">
+    <p class="text-sm p-4">Everything here is © 2021 by Edward C. "Ted" McCormick, all rights reserved.</p>
+  </div>
+  <!--    </div>-->
+  <!--    <div class="flex flex-row justify-end">-->
+  <!--        <a href="https://www.linkedin.com/in/ted-mccormick/"><img class="h-10 w-10 inline" src="img/LI-In-Bug.png" alt="The LinkedIn Logo">LinkedIn</a>-->
+  <!--    </div>-->
+  <!--    <div class="flex flex-row justify-end"><a href="https://github.com/edwardmccormick"><img class="h-10 w-10 inline" src="img/github-mark.svg" alt="The Github Logo">Github</a>-->
+  <!--    </div>-->
+  <!--    </div>-->
+
+  <!--                <p>But everything here is available for inspection or to modify and make your own - check out <a href="https://github.com/edwardmccormick"><i class="fab fa-github-square"></i> my Github</a> for more.</p>-->
+
+  <!--                <p>All servicemarks, trademarks, and logos are used without permission of the trademark or rights holders. No infringement on any claim of their rights intended.</p>-->
+
+  <!--                <div class="flex flex-row justify-around flex-wrap">-->
+  <!--                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" height="50px">-->
+  <!--                    <img src="img/jquery-vertical.svg" height="50px">-->
+  <!--                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/IntelliJ_IDEA_Logo.svg" height="50px">-->
+  <!--                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Synology_Logo.svg" height="50px">-->
+  <!--                    <img src="img/new-php-logo.svg" height="50px">-->
+  <!--                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" height="50px">-->
+  <!--                </div></div>-->
+</footer>
+</body>
+</html>

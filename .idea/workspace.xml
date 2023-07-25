@@ -1,42 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cb6539f2-6067-4ed1-a768-cc94bb22a86f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/output.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Bash_Logo_Colored.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Dexter_TownHall.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Dexter_Vistor_center.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Java_programming_language_logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/LI-In-Bug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Microsoft_Office_Word.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/PDF_file_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/PowerShell_5.0_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/bootstrap-plain-wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/css3-original-wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/devops-infinity-small.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/devops-infinity-smallest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/devops-infinity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/family.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/github-mark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/html5-original-wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/jasmine-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/javascript-original.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/mingo db.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/mysql-original-wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/spring.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/swbc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/swbc_lg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tedProfilePicture.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/pipeline.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static-website-cloudformation.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cover/puppiness.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cover/puppiness.ogv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cover/puppiness.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/contact.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/flex-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/forms.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/jquery_faq.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/media-queries.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/order-pizza.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/resume.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/sandbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/twitter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/AnnapolisGraduation.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/blue abstract background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pexels-photo-1181622.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pexels-photo-434551.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pexels-photo-5054213.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pexels-photo-848573.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pizza.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/veridianlogo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/break_and_continue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/conditionals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/for_loops.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/forms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/functions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/iterating.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery_faq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/objects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/order-pizza.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/planets-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/planets-string.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/while.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,24 +104,24 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\css" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website" />
+      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\.github" />
+      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\css" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\src" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.projects.html">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,6 +181,7 @@
       <workItem from="1620790540440" duration="6649000" />
       <workItem from="1689703205142" duration="7474000" />
       <workItem from="1690060607877" duration="55534000" />
+      <workItem from="1690241033508" duration="14296000" />
     </task>
     <servers />
   </component>
