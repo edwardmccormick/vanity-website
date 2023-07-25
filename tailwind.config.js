@@ -6,7 +6,8 @@ module.exports = {
       "contact.html",
       "thankyou.html",
       "projects.html",
-      "test.html"
+      "test.html",
+      "error.html"
 
   ],
   theme: {

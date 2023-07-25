@@ -1,42 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cb6539f2-6067-4ed1-a768-cc94bb22a86f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/output.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Bash_Logo_Colored.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Dexter_TownHall.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Dexter_Vistor_center.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Java_programming_language_logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/LI-In-Bug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Microsoft_Office_Word.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/PDF_file_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/PowerShell_5.0_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/bootstrap-plain-wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/css3-original-wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/devops-infinity-small.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/devops-infinity-smallest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/devops-infinity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/family.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/github-mark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/html5-original-wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/jasmine-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/javascript-original.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/mingo db.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/mysql-original-wordmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/spring.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/swbc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/swbc_lg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tedProfilePicture.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static-website-cloudformation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/static-website-cloudformation.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,28 +63,17 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\css" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website" />
+      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\.github" />
+      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\css" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\src" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.projects.html">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="contact.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vanity-website/contact.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -170,6 +129,8 @@
       <workItem from="1620790540440" duration="6649000" />
       <workItem from="1689703205142" duration="7474000" />
       <workItem from="1690060607877" duration="55534000" />
+      <workItem from="1690241033508" duration="15104000" />
+      <workItem from="1690302537995" duration="940000" />
     </task>
     <servers />
   </component>
