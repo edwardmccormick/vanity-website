@@ -70,4 +70,4 @@ jobs:
         run: aws update-stack --stack-name ${{ AWS_STACK_NAME }} --role-arn ${{ CLOUDFORMATION_ROLE }}
 
       - name: Upload Contents of Repository to S3 Bucket
-        run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }} <target> --exclude "*.README" ".gitignore" ".idea" ".github" "tailwind.config.js" "test.html"
+        run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }} <target> --exclude ".README" ".gitignore" ".idea" ".github" "tailwind.config.js" "test.html"
