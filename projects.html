@@ -97,7 +97,7 @@
                     <p><a href="https://www.linkedin.com/in/ted-mccormick/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-0" target="_blank">
                         LinkedIn
                         <img class="h-5 w-5 inline" src="img/LI-In-Bug.png" alt="The LinkedIn Logo"> </a>
-                    </p>
+              f      </p>
                     <a href="https://github.com/edwardmccormick" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-1" target="_blank">
                         Github <img class="h-5 w-5 inline" src="img/github-mark.svg" alt="The GitHub Logo">
                     </a>
@@ -126,73 +126,98 @@
 <main class="max-w-7xl xl:mx-auto">
 <div class="d-flex flex-column flex-md-row justify-content-between">
     <div class="m-1 p-3 text-center text-md-left">
-        <h1>Take a look at what I've done.</h1>
+        <h1 class="text-4xl text-blue-900">Take a look at what I've done.</h1>
 
-        <p>These projects cover a lot of ground - both in content and technology used. Of course if you'd like to know more about any of them, <a href="contact.html">out and ask.</a>\
-            /p>
+        <p class="text-lg text-gray-400 ">These projects cover a lot of ground - both in content and technology used. Of course if you'd like to know more about any of them, <a class="text-blue-600 hover:underline" href="contact.html">reach out and ask.</a></p>
     </div>
 
 
 </div>
+<div class="container mx-auto flex justify-between flex-col md:grid md:grid-cols-5 sm:px-4 md:auto-rows-fr md:gap-4">
+<!--    <hr class="featurette-divider absolute">-->
+<!--    <div class="flex flex-wrap my-4 justify-between featurette" id="adlister">-->
 
-    <div class="container mx-auto sm:px-4">
-        <hr class="featurette-divider">
+    <div class="md:col-span-3 p-4 m-4">
+        <h2 class="featurette-heading">Springboot Blog<span class="text-gray-700"> A modern Java framework, serving a full stack modern CRUD application. </span></h2>
+        <p class="text-xl font-light">This is a fully responsive, fully interactive, mobile responsive full stack application. </p>
+        <div class="text-center"><a href="https://github.com/edwardmccormick/codeup-web-exercises/blob/main/weather_map.html" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="weather_map.html" target="_blank"><button type="button" class="disabled:opacity-75 m-1 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 disabled:opacity-75" disabled>See it live!</button></a></div>
+    </div>
+    <div class="md:col-span-2 p-4 m-4">
+        <img src="img/weathermap.png" class="object-cover mx-auto" role="img" aria-label="A screenshot of a blog application" focusable="false">
 
-        <div class="flex flex-wrap  featurette" id="weathermap">
-            <div class="md:w-3/5 pr-4 pl-4">
+    </div>
+
+        <div class="md:col-span-2">
+            <img src="img/Java_programming_language_logo.svg" class="object-cover mx-auto max-h-60"  role="img" aria-label="Java programming language logo">
+
+        </div>
+        <div class="md:col-span-3">
+            <h2 class="featurette-heading">Adlister<span class="text-gray-700">A true full-stack CRUD application, in Java!</span></h2>
+            <p class="text-xl font-light">Another pairs programming project, AdLister is a back end focused imitation of craigslist using Java, MySQL, servlets, and Tomcat to deploy the project. This is the first 'full-stack', true CRUD (Create, Read, Update, Delete) application that I ever built. It uses a Java backend and (sort of minimal) styling, although I am quite proud of the form validation that we used.</p>
+            <div class="text-center"><a href="https://github.com/Joshua-and-Ted-Kalypso-Movie-Project/movie-database-pairs-programming" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="movies.html"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1 disabled:opacity-75" disabled target="_blank">See it live!</button></a></div>
+        </div>
+
+<!--    </div>-->
+
+
+<!--        <hr class="featurette-divider col-span-5">-->
+
+<!--        <div class="flex flex-wrap my-4 justify-between featurette" id="weathermap">-->
+            <div class="md:col-span-3 p-4 m-4">
                 <h2 class="featurette-heading">Mapbox and Openweather. <span class="text-gray-700">Two great APIs that taste better together.</span></h2>
                 <p class="text-xl font-light">This is a fully responsive, fully interactive, mobile responsive Javascript app - it even has a hand-coded autocomplete function on the search bar. It uses jQuery, Bootstrap, AJAX, vanilla Javascript, and CSS and HTML.</p>
-                <div class="text-center"><a href="https://github.com/edwardmccormick/codeup-web-exercises/blob/main/weather_map.html" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="http://tedmccormick.familyds.com/weather_map.html" target="_blank"><button type="button" class="m-1 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900">See it live!</button></a></div>
+                <div class="text-center"><a href="https://github.com/edwardmccormick/codeup-web-exercises/blob/main/weather_map.html" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="weather_map.html" target="_blank"><button type="button" class="m-1 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900">See it live!</button></a></div>
             </div>
-            <div class="md:w-2/5 pr-4 pl-4">
-                <img src="img/weathermap.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <div class="md:col-span-2 p-4 m-4">
+                <img src="img/weathermap.png" class="object-cover mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" focusable="false">
 
             </div>
-        </div>
-        <hr class="featurette-divider">
-        <div class="flex flex-wrap  featurette" id="moviedatabase">
-            <div class="md:w-2/5 pr-4 pl-4 order-2 md:order-1">
-                <img src="img/movie.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" id='' aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+<!--        </div>-->
+<!--        <hr class="featurette-divider">-->
+<!--        <div class="flex flex-wrap my-4 justify-between featurette" id="moviedatabase">-->
+            <div class="md:col-span-2 p-4 m-4">
+                <img src="img/movie.png" class="object-cover mx-auto" role="img" id='' aria-label="Placeholder: 500x500" focusable="false">
 
             </div>
-            <div class="md:w-3/5 pr-4 pl-4 order-1 md:order-2">
+            <div class="md:col-span-3 p-4 m-4">
                 <h2 class="featurette-heading">A media-front end, ready to integrate with a player. <span class="text-gray-700">Mobile responsive, modern, and interactive. Just add movies!</span></h2>
                 <p class="text-xl font-light">Another pairs programming project using multiple APIs to communicate with a private server and complete details of entries from a public server. </p>
-                <div class="text-center"><a href="https://github.com/Joshua-and-Ted-Kalypso-Movie-Project/movie-database-pairs-programming" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="movies"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1" target="_blank">See it live!</button></a></div>
+                <div class="text-center"><a href="https://github.com/Joshua-and-Ted-Kalypso-Movie-Project/movie-database-pairs-programming" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="movies.html"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1" target="_blank">See it live!</button></a></div>
             </div>
 
-        </div>
+<!--        </div>-->
 
 
-        <hr class="featurette-divider">
+<!--        <hr class="featurette-divider">-->
 
-        <div class="flex flex-wrap  featurette" id="coffeeproject">
-            <div class="md:w-3/5 pr-4 pl-4">
+<!--        <div class="flex flex-wrap my-4 justify-between featurette" id="coffeeproject">-->
+            <div class="md:col-span-3 p-4 m-4">
                 <h2 class="featurette-heading">How about a nice hot cup of coffee? <span class="text-gray-700">A responsive, interactive, Javascript web app.</span></h2>
                 <p class="text-xl font-light">This is a pairs-programmed vanilla Javascript app that has a ton of functionality and even allows the user to add to the database and display. It's lovingly hand-coded with HTML, CSS, Bootstrap, and even touches a bit of LocalStorage and file permanence.</p>
                 <div class="text-center"><a href="https://github.com/Jeremiah-and-Ted-Kalypso/coffee-project" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1 ">See the code</button></a><a href="coffee.html" target="_blank"><button type="button" class="m-1 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900">See it live!</button></a></div>
             </div>
-            <div class="md:w-2/5 pr-4 pl-4">
-                <img src="img/coffeeproject.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <div class="md:col-span-2 p-4 m-4">
+                <img src="img/coffeeproject.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" focusable="false">
 
             </div>
-        </div>
+<!--        </div>-->
 
-        <hr class="featurette-divider">
+<!--        <hr class="featurette-divider">-->
 
-        <div class="flex flex-wrap  featurette" id="wireframe">
-            <div class="md:w-3/5 pr-4 pl-4 md:order-2">
-                <h2 class="featurette-heading">And lastly, a beautiful, responsive home page mockup. <span class="text-gray-700">Built off wireframes, ready to be brought live.</span></h2>
-                <p class="text-xl font-light">Another pairs programming project built with Bootstrap, CSS, and HTML. </p>
-                <div class="text-center"><a href="https://github.com/Natalie-E-and-Ted-M/pairs-programming-bootstrap" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="pairs-programming-bootstrap.html"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1" target="_blank">See it live!</button></a></div>
-            </div>
-            <div class="md:w-2/5 pr-4 pl-4 md:order-1">
-                <img src="img/wireframe.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" id='' aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+<!--        <div class="flex flex-wrap my-4 justify-between featurette" id="wireframe">-->
+
+            <div class="md:col-span-2 p-4 m-4">
+                <img src="img/wireframe.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image max-w-full h-auto mx-auto" role="img" focusable="false">
 
             </div>
-        </div>
+    <div class="md:col-span-3 p4 m-4">
+        <h2 class="featurette-heading">And lastly, a beautiful, responsive home page mockup. <span class="text-gray-700">Built off wireframes, ready to be brought live.</span></h2>
+        <p class="text-xl font-light">Another pairs programming project built with Bootstrap, CSS, and HTML. </p>
+        <div class="text-center"><a href="https://github.com/Natalie-E-and-Ted-M/pairs-programming-bootstrap" target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1">See the code</button></a><a href="pairs-programming-bootstrap.html"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-gray-900 text-white hover:bg-gray-900 m-1" target="_blank">See it live!</button></a></div>
+    </div>
+<!--        </div>-->
 
-        <hr class="featurette-divider">
+<!--        <hr class="featurette-divider">-->
 
     </div>
     </div>

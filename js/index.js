@@ -1,16 +1,6 @@
 "use strict";
 
 
-function contactToggle() {
-    document.getElementById('contactMenu').classList.toggle("hidden");
-    // document.querySelectorAll('[role="presentation"]').forEach(function (el){
-    //     el.classList.toggle("active");
-}
-
-function mobileToggle() {
-    document.getElementById('mobile-menu').classList.toggle("hidden")
-}
-
 function copyThis() {
     this.select();
     this.setSelectionRange(0, 99999); // For mobile devices
