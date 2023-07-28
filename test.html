@@ -14,35 +14,29 @@
     <link href="css/output.css" rel="stylesheet">
 
     <title>Ted McCormick - Software Developer / DevOps Engineer / Cloud Architect</title>
-    <script src="js/index.js"></script>
-
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
 
 </head>
 
-<body>
+<body class="min-h-screen">
 
-<nav class="bg-gray-800">
+<nav class="bg-gray-800" x-data="{ open: false }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <!-- Mobile menu button-->
-                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="mobileToggle()">
+                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" @click="open = !open" aria-expanded="false" x-bind:aria-expanded="open.toString()">
                     <span class="sr-only">Open main menu</span>
                     <!--
                       Icon when menu is closed.
 
                       Menu open: "hidden", Menu closed: "block"
                     -->
-                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    <svg x-description="Icon when menu is closed." x-state:on="Menu open" x-state:off="Menu closed" class="h-6 w-6 block" :class="{ 'hidden': open, 'block': !(open) }" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
                     </svg>
-                    <!--
-                      Icon when menu is open.
-
-                      Menu open: "block", Menu closed: "hidden"
-                    -->
-                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    <svg x-description="Icon when menu is open." x-state:on="Menu open" x-state:off="Menu closed" class="h-6 w-6 hidden" :class="{ 'block': open, 'hidden': !(open) }" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
@@ -50,18 +44,22 @@
                 <div class="flex flex-shrink-0 items-center">
                     <img class="h-8 w-auto" src="img/devops-infinity-smallest.png" alt="DevOps Logo">
                 </div>
+                <div class="flex flex-shrink-0 items-center hidden min-[300px]:flex md:hidden">
+                    <span class="text-gray-100 text-sm align-item-center">Ted McCormick</span>
+                </div>
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
                         <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Resume</a>
                         <a href="projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
                         <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
-                        <a href="test.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Secret Testing Page!</a>
                     </div>
                 </div>
             </div>
-            <!--            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">-->
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <span class="text-gray-100 text-sm hidden md:inline">Edward C. &quot;Ted&quot; McCormick</span>
+            </div>
             <!--                <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">-->
             <!--                    <span class="sr-only">View notifications</span>-->
             <!--                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">-->
@@ -70,28 +68,24 @@
             <!--                </button>-->
 
             <!-- Profile dropdown -->
-            <div class="relative ml-3">
+            <div class="relative ml-3" x-data="{ open: false }">
                 <div>
-                    <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-expanded="false" aria-haspopup="true" onclick="contactToggle()">
+                    <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" @click="open = ! open" aria-expanded="false" aria-haspopup="true">
                         <span class="sr-only">Open contact list</span>
-                        <img class="h-8 w-8 rounded-full" src="img/tedProfilePicture.jpg" alt="">
+                        <img class="h-8 w-8 rounded-full" src="img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick">
                     </button>
                 </div>
-
-                <!--
-                  Dropdown menu, show/hide based on menu state.
-
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
-                <div class="hidden absolute right-0 z-10 mt-2 w-55 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" id="contactMenu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                <div class="absolute right-0 z-10 mt-2 w-55 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" id="contactMenu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" x-cloak x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." x-bind:aria-activedescendant="activeDescendant" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
                     <!-- Active: "bg-gray-100", Not Active: "" -->
-                    <a href="https://www.linkedin.com/in/ted-mccormick/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-0" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/edwardmccormick" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-1" target="_blank">Github</a>
+
+                    <p><a href="https://www.linkedin.com/in/ted-mccormick/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-0" target="_blank">
+                        LinkedIn
+                        <img class="h-5 w-5 inline" src="img/LI-In-Bug.png" alt="The LinkedIn Logo"> </a>
+                    </p>
+                    <a href="https://github.com/edwardmccormick" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-1" target="_blank">
+                        Github <img class="h-5 w-5 inline" src="img/github-mark.svg" alt="The GitHub Logo">
+                    </a>
+
                     <a href="tel:2108236753" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-2" target="_blank">Cell: (210) 823-6753</a>
                     <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black tooltip"  role="menuitem" tabindex="-1"  id="user-menu-item-3" onclick="copyEmail()" onmouseout="outFunc(this)"><span class="tooltiptext" id="emailTooltip">Copy to clipboard</span>nickname.lastname@gmail.com</button>
                     <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black tooltip"  role="menuitem" tabindex="-1"  id="user-menu-item-4" onclick="copyEmailSecure()" onmouseout="outFunc(this)"><span class="tooltiptext" id="secureEmailTooltip">Copy to clipboard</span>nickname.lastname@protonmail.com</button>
@@ -99,10 +93,10 @@
             </div>
         </div>
     </div>
-    </div>
+
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="hidden" id="mobile-menu">
+    <div class="sm:hidden" id="mobile-menu" x-show="open" style="display: none;">
         <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
@@ -174,7 +168,7 @@
                     amet velit accusamus.
                 </p>
                 <button
-                        class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
+                        class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 bottom-20 scale-0 scale-125"
                 >
                     Watch Now
                 </button>

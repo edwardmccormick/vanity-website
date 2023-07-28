@@ -76,7 +76,7 @@
                             <img class="h-8 w-8 rounded-full" src="img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick">
                         </button>
                     </div>
-                    <div class="absolute right-0 z-10 mt-2 w-55 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" id="contactMenu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." x-bind:aria-activedescendant="activeDescendant" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
+                    <div class="absolute right-0 z-10 mt-2 w-55 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" id="contactMenu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" x-cloak x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." x-bind:aria-activedescendant="activeDescendant" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
                         <!-- Active: "bg-gray-100", Not Active: "" -->
 
                         <p><a href="https://www.linkedin.com/in/ted-mccormick/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-0" target="_blank">
@@ -130,25 +130,25 @@
     <div class="w-100 m-4 ">
 
         <br>
-        <p>You can take a look at projects I've worked on and my resume above, or click through below to learn a little more about me and my background.</p>
+        <p class="m-4 p-4">You can take a look at projects I've worked on and my resume above, or click through below to learn a little more about me and my background.</p>
         <br>
         <!-- Grids baby, grids! -->
-        <div class="flex flex-col p-6 m-4 md:p-0 sm:grid-cols-2 sm:gap-3 sm:grid md:grid-cols-3 lg:grid-cols-4 md:gap-6 mx-auto container w-screen sm:min-h-[200vh] lg:min-h-screen grid-flow-row auto-rows-fr group perspective">
-            <div id='dexter' class="col-span-1 mb-6 text-center preserve-3d hover:my-rotate-y-180 duration-1000 min-h-screen sm:min-h-0">
-                <div class="absolute w-full h-full">
-                    <img class="h-full w-full rounded-lg shadow-xl object-cover" src="img/Dexter_TownHall.JPG" role="img" aria-label="Dexter, Missouri's City Hall, with an American flag flying." data-toggle="tooltip" data-placement="top" title="This is where I was born and raised. Almost literally - this building used to be the town library before it was repurposed into City Hall, and I spent a *lot* of time there growing up.">
+        <div class="flex flex-col p-6 m-4 md:p-0 sm:grid-cols-2 sm:gap-3 sm:grid md:grid-cols-3 lg:grid-cols-4 md:gap-6 mx-auto container w-screen sm:min-h-[200vh] lg:min-h-screen grid-flow-row auto-rows-fr">
+            <div id='dexter' class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover"  style="background-image: url(img/Dexter_TownHall.JPG)" @click="open = ! open">
+                <div class="w-full h-full">
+<!--                    <img class="h-full w-full rounded-lg shadow-xl object-cover" src="img/Dexter_TownHall.JPG" role="img" aria-label="Dexter, Missouri's City Hall, with an American flag flying." data-toggle="tooltip" data-placement="top" title="This is where I was born and raised. Almost literally - this building used to be the town library before it was repurposed into City Hall, and I spent a *lot* of time there growing up.">-->
+                    <div class="backdrop-blur-sm bg-white/70 -bottom-20 duration-1000 bottom-20 scale-0 scale-125" x-cloak x-show="open">
+                        <h3 class="text-lg font-semibold">Dexter, Missouri</h3>
+                        <p class="text-base my-2">
+                            I was born in southeastern Missouri, and raised there from the time that I was six years old. It's great to grow up in a small town, and Dexter still has a total population of about 7,000. When I visited my friend on the 'wrong side of the tracks' (yes, there was literally a railroad track through Dexter, and there was a 'wrong' side!) my Mom got a call <i>before I got home.</i>
+                        </p>
+                        <!--                    <button class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full ">-->
+                        <!--                        Watch Now-->
+                        <!--                    </button>-->
+                    </div>
+
                 </div>
-            <div class="absolute my-rotate-y-180 w-full h-full bg-gray-100 my-4 backdrop-blur-sm bg-white/70 backface-hidden -inset-y-4">
-                <div class="text-center items-center justify-center h-full text-gray-800 px-2 pb-24">
-                    <h3 class="text-lg font-semibold">Dexter, Missouri</h3>
-                    <p class="text-base my-2">
-                        I was born in southeastern Missouri, and raised there from the time that I was six years old. It's great to grow up in a small town, and Dexter still has a total population of about 7,000. When I visited my friend on the 'wrong side of the tracks' (yes, there was literally a railroad track through Dexter, and there was a 'wrong' side!) my Mom got a call <i>before I got home.</i>
-                    </p>
-<!--                    <button class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute -bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125">-->
-<!--                        Watch Now-->
-<!--                    </button>-->
-                </div>
-            </div>
+
         </div>
 
             <div id='usnagrad' class="col-span-1 mb-6 text-center preserve-3d hover:my-rotate-y-180 duration-1000 min-h-screen sm:min-h-0">
