@@ -42,13 +42,13 @@ jobs:
       - name: Configure AWS Credentials For GitHub Actions
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{AWS_ACCESS_KEY}}
-          aws-secret-access-key: ${{AWS_SECRET_KEY}}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: us-east-1
           mask-aws-account-id: true
 
       - name: Infrastructure Management with Cloudformation
-        run: aws update-stack --stack-name ${{ AWS_STACK_NAME }} --role-arn ${{ CLOUDFORMATION_ROLE }}
+        run: aws update-stack --stack-name ${{ secrets.AWS_STACK_NAME }} --role-arn ${{ secrets.CLOUDFORMATION_ROLE }}
 
       - name: Upload Contents of Repository to S3 Bucket
         run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }} --exclude "README.md" ".gitignore" ".idea" ".github" "tailwind.config.js" "test.html"
