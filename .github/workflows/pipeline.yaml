@@ -32,6 +32,10 @@ jobs:
       - name: Run tests
         run: deno test -A
 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
       - name: Find and Replace - Tokenize S3 Bucket Name
         run: find static-website-cloudformation.yaml -type f -exec sed -i ''s/#{S3_BUCKET_NAME}#/${{ secrets.S3_BUCKET_NAME }}/g'' {} \;
 
