@@ -5,18 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!--    Custom CSS-->
-    <link rel="stylesheet" href="css/thankyou.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/output.css" rel="stylesheet">
 
     <title>Thank You For Contacting Ted McCormick, DevOps Engineer and Software Developer</title>
-    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
 
 </head>
 
-<body class="min-h-screen">
+<body class="min-h-screen m-4">
 
 <nav class="bg-gray-800" x-data="{ open: false }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -48,10 +50,10 @@
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+                        <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
                         <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Resume</a>
                         <a href="projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                        <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="contact.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Contact</a>
                     </div>
                 </div>
             </div>
@@ -97,20 +99,21 @@
     <div class="sm:hidden" id="mobile-menu" x-show="open" style="display: none;">
         <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
+            <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
             <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Resume</a>
             <a href="projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-            <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+            <a href="contact.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Contact</a>
         </div>
     </div>
 </nav>
+
 <div class="m-1 p-3">
 
 
     <div class="jumbotron jumbotron-fluid p-0 bg-dark branson">
         <div class="container quote">
 
-            <p class="lead text text-white">"Hiring the right people takes time, the right questions, and a healthy dose of curiosity. What do you think is the most important factor when building your team? <h1 class="display-4 text text-white">For us, it’s personality."</h1></p>
+            <p class="lead text text-white">"Hiring the right people takes time, the right questions, and a healthy dose of curiosity. What do you think is the most important factor when building your team? <span class="display-4 text text-white"><strong>For us, it’s personality."</strong></span></p>
             <h4 class="text-right text-white">Richard Branson</h4>
         </div>
     </div>

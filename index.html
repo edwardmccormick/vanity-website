@@ -134,90 +134,68 @@
         <br>
         <!-- Grids baby, grids! -->
         <div class="flex flex-col p-6 m-4 md:p-0 sm:grid-cols-2 sm:gap-3 sm:grid md:grid-cols-3 lg:grid-cols-4 md:gap-6 mx-auto container w-screen sm:min-h-[200vh] lg:min-h-screen grid-flow-row auto-rows-fr">
-            <div id='dexter' class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover"  style="background-image: url(img/Dexter_TownHall.JPG)" @click="open = ! open">
-                <div class="w-full h-full">
-<!--                    <img class="h-full w-full rounded-lg shadow-xl object-cover" src="img/Dexter_TownHall.JPG" role="img" aria-label="Dexter, Missouri's City Hall, with an American flag flying." data-toggle="tooltip" data-placement="top" title="This is where I was born and raised. Almost literally - this building used to be the town library before it was repurposed into City Hall, and I spent a *lot* of time there growing up.">-->
-                    <div class="backdrop-blur-sm bg-white/70 -bottom-20 duration-1000 bottom-20 scale-0 scale-125" x-cloak x-show="open">
-                        <h3 class="text-lg font-semibold">Dexter, Missouri</h3>
-                        <p class="text-base my-2">
-                            I was born in southeastern Missouri, and raised there from the time that I was six years old. It's great to grow up in a small town, and Dexter still has a total population of about 7,000. When I visited my friend on the 'wrong side of the tracks' (yes, there was literally a railroad track through Dexter, and there was a 'wrong' side!) my Mom got a call <i>before I got home.</i>
-                        </p>
-                        <!--                    <button class="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full ">-->
-                        <!--                        Watch Now-->
-                        <!--                    </button>-->
-                    </div>
-
+            <!-- Okay, here's where the actual content starts-->
+            <div id='dexter' class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"  style="background-image: url(img/Dexter_TownHall.JPG)" x-data="{ open: false }" @click.self="open = ! open" data-toggle="tooltip" data-placement="top" title="This is where I was born and raised. Almost literally - this building used to be the town library before it was repurposed into City Hall, and I spent a *lot* of time there growing up.">
+                <div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+                    <h3 class="text-lg font-semibold">Dexter, Missouri</h3>
+                    <p class="text-base my-2">
+                        I was born in southeastern Missouri, and raised there from the time that I was six years old. It's great to grow up in a small town, and Dexter still has a total population of about 7,000. When I visited my friend on the 'wrong side of the tracks' (yes, there was literally a railroad track through Dexter, and there was a 'wrong' side!) my Mom got a call <i>before I got home.</i>
+                    </p>
                 </div>
-
         </div>
 
-            <div id='usnagrad' class="col-span-1 mb-6 text-center preserve-3d hover:my-rotate-y-180 duration-1000 min-h-screen sm:min-h-0">
-                <div class="absolute w-full h-full">
-                    <img class="h-full w-full rounded-lg shadow-xl object-cover" src="img/AnnapolisGraduationcropped.jpg" role="img" aria-label="US Naval Academy Midshipmen Celebrating at Graduation in 2006 by throwing their hats in the air" data-toggle="tooltip" data-placement="top" title="Unfortunately, none of these people are me. I was too busy celebrating to take a picture.">
-                </div>
-
-                <div class="absolute my-rotate-y-180 w-full h-full bg-gray-100 my-4 backdrop-blur-sm bg-white/70 backface-hidden -inset-y-4">
-                    <div class="text-center items-center justify-center h-full text-gray-800 px-2 pb-24">
-                        <h3 class="text-lg font-semibold">US Naval Academy<br>Annapolis, MD</h3>
-                        <p class="text-base my-2">I spent four years "by the Bay". I learned a lot - both about myself, during Plebe year, and what I was capable of surviving and thriving in, and also literally - I graduated with a Bachelor's of Science degree, even though my major was in Political Science. How many Poli-Sci majors do you know with two years of Calculus, and a year each of Electrical Engineering, Physics, and Chemistry?</p>
-                    </div>
+            <div id='usnagrad' class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"  style="background-image: url(img/AnnapolisGraduationcropped.jpg)" x-data="{ open: false }" @click.self="open = ! open" aria-label="US Naval Academy Midshipmen Celebrating at Graduation in 2006 by throwing their hats in the air" data-toggle="tooltip" data-placement="top" title="Unfortunately, none of these people are me. I was too busy celebrating to take a picture.">
+                <div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+                    <h3 class="text-lg font-semibold">US Naval Academy<br>Annapolis, MD</h3>
+                    <p class="text-base my-2">I spent four years "by the Bay". I learned a lot - both about myself, during Plebe year, and what I was capable of surviving and thriving in, and also literally - I graduated with a Bachelor's of Science degree, even though my major was in Political Science. How many Poli-Sci majors do you know with two years of Calculus, and a year each of Electrical Engineering, Physics, and Chemistry?</p>
+                    </p>
                 </div>
             </div>
-            <div id="swo" class="col-span-1 mb-6 text-center preserve-3d hover:my-rotate-y-180 duration-1000 min-h-screen sm:min-h-0">
-                <div class="absolute w-full h-full">
-                    <img class="h-full w-full rounded-lg shadow-xl object-cover" src="img/USS-Mahan.jpg" role="img" aria-label="information goes here!" data-toggle="tooltip" data-placement="top" title="I'm actually in this picture! Behind 1/2 inch of steel plate, standing watch in the Combat Information Center.">
-                </div>
-                <div class="absolute my-rotate-y-180 w-full h-full bg-gray-100 my-4 backdrop-blur-sm bg-white/70 backface-hidden -inset-y-4">
+
+            <div id="swo" class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"  style="background-image: url(img/USS-Mahan.jpg)" x-data="{ open: false }" @click.self="open = ! open" aria-label="information goes here!" data-toggle="tooltip" data-placement="top" title="I'm actually in this picture! Behind 1/2 inch of steel plate, standing watch in the Combat Information Center.">
+                <div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
                     <h3 class="text-lg font-semibold">Surface Warfare Officer</h3>
                     <p class="text-base my-2">I was in the US Navy for six years as a Surface Warfare Officer; part of that time as an engineering Officer, part of that as Training Officer, and did two deployments to the Mediterranean and off Somalia doing Counter-Piracy.</p>
-
+                    </p>
                 </div>
             </div>
 
-            <div id='family' class="col-span-1 mb-6 text-center preserve-3d hover:my-rotate-y-180 duration-1000 min-h-screen sm:min-h-0">
-                <div class="absolute w-full h-full">
-                    <img class="h-full w-full rounded-lg shadow-xl object-cover" src="img/family.jpg" role="img" aria-label="Ted and his family after his daughter's violin recital, standing in front of skysrapers in downtown San Antonio, TX." data-toggle="tooltip" data-placement="top" title="Me, my beautiful wife, and our two amazing kids.">
-                </div>
-                <div class="absolute my-rotate-y-180 w-full h-full bg-gray-100 my-4 backdrop-blur-sm bg-white/70 backface-hidden -inset-y-4">
+            <div id='family' class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"  style="background-image: url(img/family.jpg)" x-data="{ open: false }" @click.self="open = ! open" aria-label="Ted and his family after his daughter's violin recital, standing in front of skysrapers in downtown San Antonio, TX." data-toggle="tooltip" data-placement="top" title="Me, my beautiful wife, and our two amazing kids.">
+                <div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
                     <h3 class="text-lg font-semibold">Family Life</h3>
                     <p class="text-base my-2">I got out of the Navy to marry my wonderful wife. We settled in San Antonio because, well, if you want to become a Texan, marry a Texan!<br>
-                    My kids are <strong>awesome</strong>. Hectic, occasionally, but always awesome.</p>
-
+                        My kids are <strong>awesome</strong>. Hectic, occasionally, but always awesome.</p>
+                    </p>
                 </div>
             </div>
 
-
-            <div id="codeup" class="col-span-1 mb-6 text-center preserve-3d hover:my-rotate-y-180 duration-1000 min-h-screen sm:min-h-0">
-                <div class="absolute w-full h-full">
-                    <img class="h-full w-full rounded-lg shadow-xl object-cover" src="img/codeup.jpg" role="img" aria-label="" id="thirdcircle" data-toggle="tooltip" data-placement="top" title="Confession - I've been into Codeup's San Antonio campus one time - to interview. But a picture of a Zoom call is less interesting.">
-                </div>
-                <div class="absolute my-rotate-y-180 w-full h-full bg-gray-100 my-4 backdrop-blur-sm bg-white/70 backface-hidden -inset-y-4">
+            <div id="codeup" class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"  style="background-image: url(img/codeup.jpg)" x-data="{ open: false }" @click.self="open = ! open" aria-label="The entrance and sign of Codeup, the coding bootcamp in San Antonio, TX, and Dallas, TX." data-toggle="tooltip" data-placement="top" title="Confession - I've been into Codeup's San Antonio campus one time - to interview. But a picture of a Zoom call is less interesting.">
+                <div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+                    <h3 class="text-lg font-semibold">Family Life</h3>
                     <h3 class="text-lg font-semibold">Codeup</h3>
-                    <p class="text-base my-2">I joined Codeup in November of 2020, while everyone (and everything) was still remote from Covid, and graduated in May of '21.</p>
-
+                    <p class="text-base my-2">I joined Codeup in November of 2020, while everyone (and everything) was still remote from Covid, and graduated in May of '21.
+                    </p>
                 </div>
             </div>
-            <div id="devops" class="col-span-2 mb-6 text-center order-last md:col-span-3 lg:order-none lg:col-span-2 preserve-3d hover:my-rotate-y-180 duration-1000 min-h-screen sm:min-h-0">
-                <div class="absolute w-full h-full">
-                <img class="h-full w-full rounded-lg shadow-xl object-scale-down" src="img/devops-infinity.png" role="img" aria-label="The DevOps continuous deployment infinity logo, representing the continuous integration/continuous deployment cycle." data-toggle="tooltip" data-placement="top" title="We all know why you're here!">
-                </div>
-                <div class="absolute my-rotate-y-180 w-full h-full bg-gray-100 my-4 backdrop-blur-sm bg-white/70 backface-hidden -inset-y-4">
+
+            <div id="devops" class="col-span-2 mb-6 text-center order-last md:col-span-3 lg:order-none lg:col-span-2 min-h-screen sm:min-h-0 bg-contain rounded-lg bg-center bg-no-repeat"  style="background-image: url(img/devops-infinity.png)" x-data="{ open: false }" @click.self="open = ! open"  aria-label="The DevOps continuous deployment infinity logo, representing the continuous integration/continuous deployment cycle." data-toggle="tooltip" data-placement="top" title="We all know why you're here!">
+                <div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
                     <h3 class="text-lg font-semibold">DevOps</h3>
                     <p class="text-base my-2">Like most DevOps engineers (I think?) I've developed an eclectic set of skills - everything from basic automation and quality-of-life improvements through architecting cloud solutions, including implementing a zero-downtime, blue/green deployment architecture on one of SWBC's most busy serverless applications.</p>
-
                 </div>
             </div>
 
-            <div id="swbc" class="col-span-1 mb-6 text-center preserve-3d hover:my-rotate-y-180 duration-1000">
-                <div class="absolute w-full h-full">
-                    <img class="h-full w-full rounded-lg shadow-xl object-cover" src="img/swbc_lg.jpg" role="img" aria-label="The headquarters building of Southwestern Business Corporation in San Antonio, TX, on a clear, sunny day." data-toggle="tooltip" data-placement="top" title="I've been to the Home Office exactly once. It was, and I'm not kidding, to return 'The Phoenix Project' to the Corporate Library. Yes, it was overdue!">
-                </div>
-                <div class="absolute my-rotate-y-180 w-full h-full bg-gray-100 my-4 backdrop-blur-sm bg-white/70 backface-hidden -inset-y-4">
+            <div id="swbc" class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"  style="background-image: url(img/swbc_lg.jpg)" x-data="{ open: false }" @click.self="open = ! open" aria-label="The headquarters building of Southwestern Business Corporation in San Antonio, TX, on a clear, sunny day." data-toggle="tooltip" data-placement="top" title="I've been to the Home Office exactly once. It was, and I'm not kidding, to return 'The Phoenix Project' to the Corporate Library. Yes, it was overdue!">
+                <div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
                     <h3 class="text-lg font-semibold">SWBC</h3>
-                    <p class="text-base my-2">I'll always be grateful to SWBC for letting me start my career as a DevOps Engineer. I've been there two years, and I've learned so much (and only brought down production once!).</p>
+                    <p class="text-base my-2">I'll always be grateful to SWBC for letting me start my career as a DevOps Engineer. I've been there two years, and I've learned so much (and only brought down production once!).
+                    </p>
 
                 </div>
             </div>
+
+
+
         </div>
 
     </div>

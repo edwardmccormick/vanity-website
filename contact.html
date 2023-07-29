@@ -49,10 +49,10 @@
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+                        <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
                         <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Resume</a>
                         <a href="projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                        <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="contact.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Contact</a>
                     </div>
                 </div>
             </div>
@@ -98,10 +98,10 @@
     <div class="sm:hidden" id="mobile-menu" x-show="open" style="display: none;">
         <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
+            <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
             <a href="resume.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Resume</a>
             <a href="projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-            <a href="contact.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+            <a href="contact.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Contact</a>
         </div>
     </div>
 </nav>
@@ -116,16 +116,16 @@
             <h4 class="text-right text-white">George W. Romney,<br> September 13, 1963</h4>
         </div>
     </div>
-    <h3>Social Media</h3>
-    <uL><div class="container mx-auto sm:px-4 mx-auto sm:px-4 w-full flex flex-wrap  justify-between m-1 p-1 text-center">
-        <li><a href="https://www.linkedin.com/in/ted-mccormick/"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
-        <li><a href="https://github.com/edwardmccormick"><i class="fab fa-github-square"></i>Github</a></li>
-        <li><a href="https://twitter.com/ted_codes"><i class="fab fa-twitter-square"></i>Twitter </a></li>
-        <li><i class="fas fa-phone"></i>Phone: 210-823-6753</li>
-        <li><a href="http://tedmccormick.familyds.com/"><i class="fas fa-laptop-code">Vanity Site/Interactive Portfolio</i></a></li>
+<!--    <h3>Social Media</h3>-->
+<!--    <uL><div class="container mx-auto sm:px-4 mx-auto sm:px-4 w-full flex flex-wrap  justify-between m-1 p-1 text-center">-->
+<!--        <li><a href="https://www.linkedin.com/in/ted-mccormick/"><i class="fab fa-linkedin"></i>LinkedIn</a></li>-->
+<!--        <li><a href="https://github.com/edwardmccormick"><i class="fab fa-github-square"></i>Github</a></li>-->
+<!--        <li><a href="https://twitter.com/ted_codes"><i class="fab fa-twitter-square"></i>Twitter </a></li>-->
+<!--        <li><i class="fas fa-phone"></i>Phone: 210-823-6753</li>-->
+<!--        <li><a href="http://tedmccormick.familyds.com/"><i class="fas fa-laptop-code">Vanity Site/Interactive Portfolio</i></a></li>-->
     </div>
-    </uL>
-
+<!--    </uL>-->
+    <div class="m-4 min-h-min">
     <h1>Contact Me:</h1>
     <form method="POST" action="https://request-inspector.glitch.me/">
         <!--        <form method="post" action="https://www.elformo.com/forms/e5878aa8-9305-4e48-9dff-aad785d47572">-->
@@ -164,9 +164,18 @@
                 <label for="bodytext">Message</label>
                 <textarea class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="bodytext" rows="5" placeholder="Body of message here." name="bodtext"></textarea>
             </div>
-        </div>
-        <button type="submit" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline bg-gray-600 text-white hover:bg-gray-700 py-3 px-4 leading-tight text-xl float-right mx-3 my-0"><span>Contact/Submit</span></button>
+
+
+
+
+            <div class="w-full flex flex-row justify-end">
+            <button type="submit" class="w-full sm:w-auto align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline bg-gray-600 text-white hover:bg-gray-700 p-4 leading-tight text-xl m-3 duration-500"><span>Contact/Submit</span></button>
+            </div>
+    </div>
+
     </form>
+    </div>
+
 
 </div>
 </main>

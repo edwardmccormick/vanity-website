@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb6539f2-6067-4ed1-a768-cc94bb22a86f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android-chrome-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/devops-infinity-smallest-square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pipeline.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/resume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thankyou.html" beforeDir="false" afterPath="$PROJECT_DIR$/thankyou.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +81,7 @@
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.projects.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="contact.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vanity-website/contact.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -108,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.projects.html" />
         <item itemvalue="JavaScript Debug.test.html" />
         <item itemvalue="JavaScript Debug.contact.html" />
         <item itemvalue="JavaScript Debug.resume.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -150,6 +141,8 @@
       <workItem from="1690302537995" duration="940000" />
       <workItem from="1690342837146" duration="19362000" />
       <workItem from="1690397359590" duration="5462000" />
+      <workItem from="1690508501373" duration="295000" />
+      <workItem from="1690652911592" duration="10642000" />
     </task>
     <servers />
   </component>
@@ -170,5 +163,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="YamllintSettings">
+    <option name="binPath" value="yamllint" />
   </component>
 </project>

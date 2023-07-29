@@ -1,12 +1,5 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# This workflow will install Deno then run `deno lint` and `deno test`.
-# For more information see: https://github.com/denoland/setup-deno
-
-name: Deno
+---
+name: Test and Deploy Pipeline
 
 on:
   push:
@@ -20,15 +13,13 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Setup repo
         uses: actions/checkout@v3
-        - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
 
       - name: Setup Deno
-        # uses: denoland/setup-deno@v1
-        uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31  # v1.1.2
+        uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31
         with:
           deno-version: v1.x
 
@@ -49,25 +40,15 @@ jobs:
 
 
       - name: Configure AWS Credentials For GitHub Actions
-        # You may pin to the exact commit or the version.
-        # uses: aws-actions/configure-aws-credentials@5fd3084fc36e372ff1fff382a39b10d03659f355
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          # The audience to use for the OIDC provider
-          audience: # optional, default is sts.amazonaws.com
-          # AWS Access Key ID. This input is required if running in the GitHub hosted environment. It is optional if running in a self-hosted environment that already has AWS credentials, for example on an EC2 instance.
           aws-access-key-id: ${{AWS_ACCESS_KEY}}
-          # AWS Secret Access Key. This input is required if running in the GitHub hosted environment. It is optional if running in a self-hosted environment that already has AWS credentials, for example on an EC2 instance.
           aws-secret-access-key: ${{AWS_SECRET_KEY}}
-          # AWS Session Token
-          aws-session-token: # optional
-          # AWS Region, e.g. us-east-2
           aws-region: us-east-1
-          # Whether to set the AWS account ID for these credentials as a secret value, so that it is masked in logs. Valid values are 'true' and 'false'. Defaults to true
           mask-aws-account-id: true
 
       - name: Infrastructure Management with Cloudformation
         run: aws update-stack --stack-name ${{ AWS_STACK_NAME }} --role-arn ${{ CLOUDFORMATION_ROLE }}
 
       - name: Upload Contents of Repository to S3 Bucket
-        run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }} <target> --exclude ".README" ".gitignore" ".idea" ".github" "tailwind.config.js" "test.html"
+        run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }} --exclude "README.md" ".gitignore" ".idea" ".github" "tailwind.config.js" "test.html"

@@ -15,7 +15,6 @@ const CardFlipFunctionality = plugin(function ({ addUtilities }) {
         },
         ".backface-hidden": {
             backfaceVisibility: "hidden",
-            -webkit-backfaceVisibility: "hidden",
         },
     });
 });
