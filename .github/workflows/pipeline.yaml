@@ -4,6 +4,7 @@ name: Test and Deploy Pipeline
 on:
   push:
     branches: ["main"]
+    branches: ["feature/pipeline"]
   pull_request:
     branches: ["main"]
 
@@ -37,7 +38,7 @@ jobs:
     steps:
 
       - name: Find and Replace - Tokenize S3 Bucket Name
-        run: find ../static-website-cloudformation.yaml -type f -exec sed -i ''s/#{S3_BUCKET_NAME}#/${{ secrets.S3_BUCKET_NAME }}/g'' {} \;
+        run: find *.yaml -type f -exec sed -i ''s/#{S3_BUCKET_NAME}#/${{ secrets.S3_BUCKET_NAME }}/g'' {} \;
 
       - name: Find and Replace - Tokenize AWS Hosted Zone Id
         run: find ../static-website-cloudformation.yaml -type f -exec sed -i ''s/#{AWS_HOSTED_ZONE_ID}#/${{ secrets.AWS_HOSTED_ZONE_ID }}/g'' {} \;
