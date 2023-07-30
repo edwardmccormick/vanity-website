@@ -61,7 +61,7 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: ${{ secrets.AWS_STACK_NAME }}
-          template: ../static-website-cloudformation.yaml
+          template: static-website-cloudformation.yaml
           timeout-in-minutes: 60
           role-arn: ${{ secrets.CLOUDFORMATION_ROLE }}
 
