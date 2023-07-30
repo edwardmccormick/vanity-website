@@ -3,10 +3,12 @@ name: Test and Deploy Pipeline
 
 on:
   push:
-    branches: ["main"]
-    branches: ["feature/pipeline"]
+    branches:
+      - 'main'
+      - 'feature/pipeline'
   pull_request:
-    branches: ["main"]
+    branches:
+      - 'main'
 
 permissions:
   contents: read
