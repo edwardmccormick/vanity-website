@@ -14,3 +14,5 @@ TODOs:
 - I'd like to integrate all of the above CI/CD wise.
 - Eventually I'm going to Blue/Green this pipeline, not because zero downtime deployments being that important to my vanity site, but more because I want to show what it looks like. 😀
 - I really like the navbar (does this look familiar: https://tailwindui.com/components/application-ui/navigation/navbars) but there's some spit and polish there that should be done. Mostly improving the CSS fit and finish.
+
+[![Test and Deploy Pipeline](https://github.com/edwardmccormick/vanity-website/actions/workflows/pipeline.yaml/badge.svg)](https://github.com/edwardmccormick/vanity-website/actions/workflows/pipeline.yaml)
