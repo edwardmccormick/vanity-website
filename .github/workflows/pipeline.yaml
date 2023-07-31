@@ -67,4 +67,4 @@ jobs:
           role-arn: ${{ secrets.CLOUDFORMATION_ROLE }}
 
       - name: Upload Contents of Repository to S3 Bucket
-        run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }}. s3://${{ secrets.S3_BUCKET_NAME }}/ted --recursive --exclude "*.md" --exclude".*" --exclude "tailwind.config.js" --exclude "test.html" --exclude "*.yaml"
+        run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }}. s3://${{ secrets.S3_BUCKET_NAME }}/ted --recursive --exclude "*.md" --exclude ".*" --exclude "tailwind.config.js" --exclude "test.html" --exclude "*.yaml"
