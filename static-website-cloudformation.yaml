@@ -35,6 +35,7 @@ Resources:
         Origins:
           - DomainName: '#{S3_BUCKET_NAME}#.s3-website-us-east-1.amazonaws.com'
             Id: myS3Origin
+            OriginPath: '/ted'
             CustomOriginConfig:
               HTTPPort: '80'
               HTTPSPort: '443'

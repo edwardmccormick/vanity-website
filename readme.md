@@ -16,3 +16,4 @@ TODOs:
 - I really like the navbar (does this look familiar: https://tailwindui.com/components/application-ui/navigation/navbars) but there's some spit and polish there that should be done. Mostly improving the CSS fit and finish.
 
 [![Test and Deploy Pipeline](https://github.com/edwardmccormick/vanity-website/actions/workflows/pipeline.yaml/badge.svg)](https://github.com/edwardmccormick/vanity-website/actions/workflows/pipeline.yaml)
+[![pages-build-deployment](https://github.com/edwardmccormick/vanity-website/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/edwardmccormick/vanity-website/actions/workflows/pages/pages-build-deployment)
