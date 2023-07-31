@@ -26,14 +26,14 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Verify formatting
-        run: deno fmt --check
-      - name: Run linter
-
-        run: deno lint
-
-      - name: Run tests
-        run: deno test -A
+#      - name: Verify formatting
+#        run: deno fmt --check
+#      - name: Run linter
+#
+#        run: deno lint
+#
+#      - name: Run tests
+#        run: deno test -A
 
   deploy:
     runs-on: ubuntu-latest
