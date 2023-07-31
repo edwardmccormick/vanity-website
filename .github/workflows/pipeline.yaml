@@ -6,6 +6,7 @@ on:
     branches:
       - 'main'
       - 'feature/pipeline'
+      - 'feature/contact'
   pull_request:
     branches:
       - 'main'
