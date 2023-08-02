@@ -7,6 +7,43 @@ const REGION = "us-east-1";
 const sesClient = new SESClient({ region: REGION });
 
 
+const createSendEmailCommand = (toAddress, fromAddress, HTMLEmailBody, DataEmailBody, subject) => {
+    return new SendEmailCommand({
+        Destination: {
+            /* required */
+            CcAddresses: [
+                /* more items */
+            ],
+            ToAddresses: [
+                toAddress,
+                /* more To-email addresses */
+            ],
+        },
+        Message: {
+            /* required */
+            Body: {
+                /* required */
+                Html: {
+                    Charset: "UTF-8",
+                    Data: HTMLEmailBody,
+                },
+                Text: {
+                    Charset: "UTF-8",
+                    Data: DataEmailBody,
+                },
+            },
+            Subject: {
+                Charset: "UTF-8",
+                Data: subject,
+            },
+        },
+        Source: fromAddress,
+        ReplyToAddresses: [
+            /* more items */
+        ],
+    });
+};
+
 export const handler = async (event) => {
     console.log('event.body looks like: ',event.body)
 
@@ -18,49 +55,14 @@ export const handler = async (event) => {
 
     const bodyDecoded = decodeURIComponent(body.replace(/\+/g, " ").replace(/\=/g,"\":\"").replace(/\&/g,"\",\""))
     console.log(bodyDecoded)
-    const bodyJson = JSON.parse("{"+bodyDecoded+"}")
+    const bodyJson = JSON.parse('{\"'+bodyDecoded+'\"}')
 
-    console.log("The output from the JSON attempt is: ", bodyJson)
+    console.log("The output from the JSON attempt is: \n", bodyJson)
 
 
-    const createSendEmailCommand = (toAddress, fromAddress, HTMLEmailBody, DataEmailBody, subject) => {
-        return new SendEmailCommand({
-            Destination: {
-                /* required */
-                CcAddresses: [
-                    /* more items */
-                ],
-                ToAddresses: [
-                    toAddress,
-                    /* more To-email addresses */
-                ],
-            },
-            Message: {
-                /* required */
-                Body: {
-                    /* required */
-                    Html: {
-                        Charset: "UTF-8",
-                        Data: HTMLEmailBody,
-                    },
-                    Text: {
-                        Charset: "UTF-8",
-                        Data: DataEmailBody,
-                    },
-                },
-                Subject: {
-                    Charset: "UTF-8",
-                    Data: subject,
-                },
-            },
-            Source: fromAddress,
-            ReplyToAddresses: [
-                /* more items */
-            ],
-        });
-    };
 
-    const run = async () => {
+
+    return  async () => {
         const sendEmailCommand = createSendEmailCommand(
             bodyJson.email,
             "tedmccormick@mccormickhub.com",
