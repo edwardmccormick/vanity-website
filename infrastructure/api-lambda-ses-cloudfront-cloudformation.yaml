@@ -1,0 +1,89 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  This cloudformation template is designed to create and manage the
+  infrastructure of a of a simple backend, supporting the 'contact-me'
+  functionality of a static website. There is a CloudFront (to handle
+  DNS resolution and CORS), an API gateway (with only one method enabled),
+  a lambda to respond at that method, and SES integration (to send emails
+  based on the information received).
+Resources:
+    McCormickHubApiGateway:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      CorsConfiguration:
+        AllowCredentials: false
+        AllowMethods:
+          - "POST"
+        AllowOrigins:
+          - "http://tedmccormick.familyds.com/"
+          - "https://edwardmccormick.github.io/"
+          - "https://ted.mccormickhub.com/"
+          - "https://www.ted.mccormickhub.com/"
+      Description: 'This API supports the contact me functionality/page of the static site
+      hosted at www.ted.mccormickhub.com'
+      DisableExecuteApiEndpoint: False
+      FailOnWarnings: False
+      Name: 'mccormickhub-api'
+      ProtocolType: 'HTTP'
+  McCormickHubApiGatewayContactRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref McCormickHubApiGateway
+      ApiKeyRequired: False
+      AuthorizationType: 'NONE'
+      RouteKey: 'POST /contact'
+      RouteResponseSelectionExpression: String
+      Target: String
+  McCormickHubEmailSenderLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Architectures:
+        - 'x86_64'
+      Code:
+        S3Bucket: {{CodeBucket}}
+        S3Key: function.zip
+      CodeSigningConfigArn: String
+      DeadLetterConfig:
+        DeadLetterConfig
+      Description: String
+      Environment:
+        Environment
+      EphemeralStorage:
+        EphemeralStorage
+      FileSystemConfigs:
+        - FileSystemConfig
+      FunctionName: String
+      Handler: String
+      ImageConfig:
+        ImageConfig
+      KmsKeyArn: String
+      Layers:
+        - String
+      MemorySize: Integer
+      PackageType: String
+      ReservedConcurrentExecutions: Integer
+      Role: String
+      Runtime: String
+      RuntimeManagementConfig:
+        RuntimeManagementConfig
+      SnapStart:
+        SnapStart
+      Tags:
+        - Tag
+      Timeout: Integer
+      TracingConfig:
+        TracingConfig
+      VpcConfig:
+        VpcConfig
+  McCormickHubApiGatewayContactIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref McCormickHubApiGateway
+      Description: 'This route allows the API gateway to call the lambda.'
+      IntegrationMethod: String
+      IntegrationSubtype: String
+      IntegrationType: 'AWS_PROXY'
+      PayloadFormatVersion: '2.0'
+#      ResponseParameters: Json
+      TimeoutInMillis: 3000
+      

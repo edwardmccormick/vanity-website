@@ -76,29 +76,6 @@ Resources:
         DNSName: !GetAtt StaticSiteCloudfront.DomainName
         EvaluateTargetHealth: False
         HostedZoneId: Z2FDTNDATAQYW2
-  McCormickHubApiGateway
-    Type: AWS::ApiGatewayV2::Api
-    Properties:
-      ApiKeySelectionExpression: String
-      BasePath: String
-      Body: Json
-      BodyS3Location:
-        BodyS3Location
-      CorsConfiguration:
-        Cors
-      CredentialsArn: String
-      Description: String
-      DisableExecuteApiEndpoint: Boolean
-      DisableSchemaValidation: Boolean
-      FailOnWarnings: Boolean
-      Name: String
-      ProtocolType: String
-      RouteKey: String
-      RouteSelectionExpression: String
-      Tags:
-        Key: Value
-      Target: String
-      Version: String
 
 
 Outputs:

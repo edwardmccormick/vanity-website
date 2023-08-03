@@ -13,6 +13,7 @@
     <link href="css/output.css" rel="stylesheet">
     <title>Email Ted McCormick, DevOps Engineer and Software Developer</title>
     <script src="js/index.js"></script>
+    <script src="js/contact.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
     <meta name="description" content="This is the 'contact me' page from the personal homepage and/or professional website for Edward C. 'Ted' McCormick, a software developer, DevOps Engineer, and Cloud Architect.">
 </head>
@@ -74,7 +75,7 @@
                         <img class="h-8 w-8 rounded-full" src="img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick">
                     </button>
                 </div>
-                <div class="absolute right-0 z-10 mt-2 w-55 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" id="contactMenu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" x-cloak x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." x-bind:aria-activedescendant="activeDescendant" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
+                <div class="absolute right-0 z-10 mt-2 w-55 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" id="contactMenu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" x-cloak x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state." aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()" @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()" @keyup.space.prevent="open = false; focusButton()">
                     <!-- Active: "bg-gray-100", Not Active: "" -->
 
                     <p><a href="https://www.linkedin.com/in/ted-mccormick/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-0" target="_blank">
@@ -170,7 +171,7 @@
 
 
             <div class="w-full flex flex-row justify-end">
-            <button type="submit" class="w-full sm:w-auto align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline bg-gray-600 text-white hover:bg-gray-700 p-4 leading-tight text-xl m-3 duration-500"><span>Contact/Submit</span></button>
+            <button type="submit" id="contactButton" class="w-full sm:w-auto align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline bg-gray-600 text-white hover:bg-gray-700 p-4 leading-tight text-xl m-3 duration-500"><span>Contact/Submit</span></button>
             </div>
     </div>
 

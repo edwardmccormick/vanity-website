@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb6539f2-6067-4ed1-a768-cc94bb22a86f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/SendMailLambda.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pipeline.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-lambds-cloudformation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/api-lambda-ses-cloudfront-cloudformation.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/SendMailLambda.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static-website-cloudformation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/static-website-cloudformation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/resume.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contact-me-mail-forwarder/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contact-me-mail-forwarder/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static-website-cloudformation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/static-website-cloudformation.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +78,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\.github\workflows" />
+      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\infrastructure" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website" />
+      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\.github\workflows" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\.github" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\css" />
-      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.contact.html">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="contact.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vanity-website/contact.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -96,10 +114,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.contact.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.projects.html" />
         <item itemvalue="JavaScript Debug.test.html" />
-        <item itemvalue="JavaScript Debug.contact.html" />
         <item itemvalue="JavaScript Debug.resume.html" />
       </list>
     </recent_temporary>
@@ -140,7 +158,8 @@
       <workItem from="1690397359590" duration="5462000" />
       <workItem from="1690508501373" duration="295000" />
       <workItem from="1690652911592" duration="11834000" />
-      <workItem from="1690812184916" duration="8922000" />
+      <workItem from="1690812184916" duration="17161000" />
+      <workItem from="1690990643403" duration="11210000" />
     </task>
     <servers />
   </component>
