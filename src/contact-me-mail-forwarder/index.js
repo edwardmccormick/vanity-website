@@ -1,50 +1,19 @@
 import { SESv2Client, SendEmailCommand } from "@aws-sdk/client-sesv2"; // ES Modules import
 // const { SESv2Client, SendEmailCommand } = require("@aws-sdk/client-sesv2"); // CommonJS import
 import { SESClient } from "@aws-sdk/client-ses";
+
 // Set the AWS Region.
 const REGION = "us-east-1";
 // Create SES service object.
 const sesClient = new SESClient({ region: REGION });
 
 
-const createSendEmailCommand = (toAddress, fromAddress, HTMLEmailBody, DataEmailBody, subject) => {
-    return new SendEmailCommand({
-        Destination: {
-            /* required */
-            CcAddresses: [
-                /* more items */
-            ],
-            ToAddresses: [
-                toAddress,
-                /* more To-email addresses */
-            ],
-        },
-        Message: {
-            /* required */
-            Body: {
-                /* required */
-                Html: {
-                    Charset: "UTF-8",
-                    Data: HTMLEmailBody,
-                },
-                Text: {
-                    Charset: "UTF-8",
-                    Data: DataEmailBody,
-                },
-            },
-            Subject: {
-                Charset: "UTF-8",
-                Data: subject,
-            },
-        },
-        Source: fromAddress,
-        ReplyToAddresses: [
-            /* more items */
-        ],
-    });
-};
+
 
 export const handler = async (event) => {
+
+    console.log("Event looks like: ", event)
+
     console.log('event.body looks like: ',event.body)
 
 
@@ -59,35 +28,59 @@ export const handler = async (event) => {
 
     console.log("The output from the JSON attempt is: \n", bodyJson)
 
+    console.log("Stringifying the bodyJson results in: \n", JSON.stringify(bodyJson))
+    console.log("The email from the JSON (used as a to address) is: ", bodyJson.email.toString())
 
+    let emailBodyHtml = `Hello ${bodyJson.name}!<br>
+    <br>
+    Thank you for contacting me.<br>
+    I'm included on the to line of this email, so if there's something more you need to tell me, just hit reply all!<br>
+    Let me just make sure I got all of your information correct:<br>
+    <ul>
+    <li>Your email address is: ${bodyJson.email}</li>
+    <li>Your name is: ${bodyJson.name}</li>
+    <li>Your phone number is: ${bodyJson.phone}</li>
+    <li>You wrote:<br>
+    ${bodyJson.bodtext}<br></li>
+    </ul>
+    <br>
+    <br>
+    Again, I'll get back to you shortly - thank you again for contacting me!<br>
+    <br>
+    Best regards,<br>
+    Edward "Ted" McCormick
+    
+    `
 
+    const input = { // SendEmailRequest
+        FromEmailAddress: "postmaster@mccormickhub.com",
+        Destination: { // Destination
+            ToAddresses: [ // EmailAddressList
+                "ted.mccormick@gmail.com", bodyJson.email
+            ],
+        },
+        Content: { // EmailContent
+            Simple: { // Message
+                Subject: { // Content
+                    Data: "This is from the the emailsender lambda",
+                },
+                Body: { // Body
+                    Html: {
+                        Data: emailBodyHtml,
+                    },
+                },
+            },
+        },
 
-    return  async () => {
-        const sendEmailCommand = createSendEmailCommand(
-            bodyJson.email,
-            "tedmccormick@mccormickhub.com",
-            bodyJson,
-            "Nothing much for the Data Body",
-            "This is a test of the contact-me-mail-forwarder"
-        );
-
-        try {
-            return await sesClient.send(sendEmailCommand);
-        } catch (e) {
-            console.error("Failed to send email.");
-            return e;
-        }
     };
 
 
+    const command = new SendEmailCommand(input);
 
-
-    // console.log('The bodtext variable looks like: ', body.bodtext)
-
-
-    // const response = {
-    //     statusCode: 200,
-    //     body: JSON.stringify('Triggered the lambda named contact-me-forwarder. Look, you even got the new code! Great job! And look, now we\'re returning variables from the response too! Like this: ' + body),
-    // };
-    // return response;
+    try {
+        return await sesClient.send(command);
+    } catch (e) {
+        console.error("Failed to send email.");
+        return e;
+    }
 };
