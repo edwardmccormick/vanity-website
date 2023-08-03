@@ -23,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -73,14 +73,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\.github\workflows" />
+      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\infrastructure" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website" />
+      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\.github\workflows" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\.github" />
       <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\css" />
-      <recent name="C:\Users\tedmc\IdeaProjects\vanity-website\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.contact.html">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="contact.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vanity-website/contact.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -98,10 +109,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.contact.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.projects.html" />
         <item itemvalue="JavaScript Debug.test.html" />
-        <item itemvalue="JavaScript Debug.contact.html" />
         <item itemvalue="JavaScript Debug.resume.html" />
       </list>
     </recent_temporary>
@@ -142,6 +153,8 @@
       <workItem from="1690397359590" duration="5462000" />
       <workItem from="1690508501373" duration="295000" />
       <workItem from="1690652911592" duration="11834000" />
+      <workItem from="1690812184916" duration="17161000" />
+      <workItem from="1690990643403" duration="18526000" />
     </task>
     <servers />
   </component>

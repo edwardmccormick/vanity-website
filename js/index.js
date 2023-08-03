@@ -20,4 +20,3 @@ function copyEmailSecure() {
 function outFunc(x) {
     x.querySelectorAll(':scope > .tooltiptext')[0].innerHTML = "Copy to clipboard";
 }
-// document.getElementById("profilePicture").addEventListener(onclick(contactToggle()))
