@@ -61,7 +61,7 @@ jobs:
           mask-aws-account-id: true
 
       - name: Upload Contents of Repository to S3 Bucket
-        run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }}/infrastructure/static-website-cloudformation.yaml s3://${{ secrets.S3_CODEBUCKET_NAME }}
+        run: aws s3 cp ${{ vars.GITHUB_WORKSPACE }}/infrastructure/. s3://${{ secrets.S3_CODEBUCKET_NAME }}
 
       - name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions
         uses: aws-actions/aws-cloudformation-github-deploy@v1
