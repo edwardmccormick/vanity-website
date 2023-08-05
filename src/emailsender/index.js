@@ -14,6 +14,7 @@ export const handler = async (event) => {
 
     console.log("Event looks like: ", event)
 
+
     // console.log('event.body looks like: ',event.body)
 
     const bodyJson = event
@@ -41,6 +42,7 @@ export const handler = async (event) => {
     console.log("The output from the JSON attempt is: \n", bodyJson)
 
     console.log("Stringifying the bodyJson results in: \n", JSON.stringify(bodyJson))
+
     console.log("The email from the JSON (used as a to address) is: ", bodyJson.email)
 
     let emailBodyHtml = `Hello ${bodyJson.name}!<br>
@@ -64,29 +66,8 @@ export const handler = async (event) => {
     
     `
 
+
     console.log("The emailBodyHtml looks like: ",emailBodyHtml)
-
-    const input = { // SendEmailRequest
-        FromEmailAddress: "postmaster@mccormickhub.com",
-        Destination: { // Destination
-            ToAddresses: [ // EmailAddressList
-                "ted.mccormick@gmail.com", bodyJson.email
-            ],
-        },
-        Content: { // EmailContent
-            Simple: { // Message
-                Subject: { // Content
-                    Data: "This is from the the emailsender lambda",
-                },
-                Body: { // Body
-                    Html: {
-                        Data: emailBodyHtml,
-                    },
-                },
-            },
-        },
-
-    };
 
     const command = new SendEmailCommand(input);
 
@@ -102,6 +83,7 @@ export const handler = async (event) => {
             body: "Thanks for contact me! And for checking your console to see this! I'll be back in touch with you shortly!"
         };
         return response
+
     } catch (e) {
         console.error("Failed to send email.");
         return e;
