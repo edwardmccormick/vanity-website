@@ -14,22 +14,36 @@ export const handler = async (event) => {
 
     console.log("Event looks like: ", event)
 
-    console.log('event.body looks like: ',event.body)
+
+    // console.log('event.body looks like: ',event.body)
+
+    const bodyJson = event
+
+    // console.log('event.isBase64Encoded looks like: ',event.isBase64Encoded)
+
+    // if (!(event.isBase64Encoded == false)) {
+    //     const body = new Buffer.from(event.body, 'base64').toString('binary')
+
+    //     console.log('Did base 64 decode work? The original: ', event)
+    //     console.log('The "decoded" version: ', body)
+
+    //     const bodyDecoded = decodeURIComponent(body.replace(/\+/g, " ").replace(/\=/g,"\":\"").replace(/\&/g,"\",\""))
+    //     console.log(bodyDecoded)
+    //     bodyJson = JSON.parse('{\"'+bodyDecoded+'\"}')
 
 
-    const body = new Buffer.from(event.body, 'base64').toString('binary')
+    // }
+    // else {
+    //     console.log("Body not base64 encoded - using as plain text.")
+    // bodyJson = JSON.parse(event)
 
-    console.log('Did base 64 decode work? The original: ', event)
-    console.log('The "decoded" version: ', body)
-
-    const bodyDecoded = decodeURIComponent(body.replace(/\+/g, " ").replace(/\=/g,"\":\"").replace(/\&/g,"\",\""))
-    console.log(bodyDecoded)
-    const bodyJson = JSON.parse('{\"'+bodyDecoded+'\"}')
+    // }
 
     console.log("The output from the JSON attempt is: \n", bodyJson)
 
     console.log("Stringifying the bodyJson results in: \n", JSON.stringify(bodyJson))
-    console.log("The email from the JSON (used as a to address) is: ", bodyJson.email.toString())
+
+    console.log("The email from the JSON (used as a to address) is: ", bodyJson.email)
 
     let emailBodyHtml = `Hello ${bodyJson.name}!<br>
     <br>
@@ -52,33 +66,24 @@ export const handler = async (event) => {
     
     `
 
-    const input = { // SendEmailRequest
-        FromEmailAddress: "postmaster@mccormickhub.com",
-        Destination: { // Destination
-            ToAddresses: [ // EmailAddressList
-                "ted.mccormick@gmail.com", bodyJson.email
-            ],
-        },
-        Content: { // EmailContent
-            Simple: { // Message
-                Subject: { // Content
-                    Data: "This is from the the emailsender lambda",
-                },
-                Body: { // Body
-                    Html: {
-                        Data: emailBodyHtml,
-                    },
-                },
-            },
-        },
 
-    };
-
+    console.log("The emailBodyHtml looks like: ",emailBodyHtml)
 
     const command = new SendEmailCommand(input);
 
     try {
-        return await sesClient.send(command);
+        await sesClient.send(command)
+        const response = {
+            statusCode: 200,
+            headers: {
+                "Access-Control-Allow-Headers" : "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "OPTIONS,POST"
+            },
+            body: "Thanks for contact me! And for checking your console to see this! I'll be back in touch with you shortly!"
+        };
+        return response
+
     } catch (e) {
         console.error("Failed to send email.");
         return e;
