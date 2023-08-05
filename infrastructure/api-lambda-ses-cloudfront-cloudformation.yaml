@@ -24,7 +24,7 @@ Resources:
       DisableExecuteApiEndpoint: False
       FailOnWarnings: False
       Name: 'mccormickhub-api'
-      ProtocolType: 'HTTP'
+      ProtocolType: 'REST'
   McCormickHubApiGatewayContactRoute:
     Type: AWS::ApiGatewayV2::Route
     Properties:
