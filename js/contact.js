@@ -16,24 +16,29 @@ function toggleDisable(elements) {
 function contactSubmit(e) {
     e.preventDefault();
 
-    let bodyJSON = JSON.stringify(`{email: ${emailform.value},name: ${nameform.value},phone: ${phoneform.value},source: ${sourceform.value}, bodtext: ${bodytextform.value}}`);
+    let bodyJSON = {email: emailform.value,name: nameform.value,phone: phoneform.value,source: sourceform.value, bodtext: bodytextform.value}
+
+    console.log("bodyJSON looks like: \n",bodyJSON)
+
     toggleDisable([emailform,nameform,phoneform,sourceform,bodytextform])
     const requestOptions = {
-        method: 'PUT',
+        method: 'POST',
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
-        body: bodyJSON
+        body: JSON.stringify(bodyJSON)
     };
-    fetch('https://00ln60gbx0.execute-api.us-east-1.amazonaws.com/production/contact', requestOptions)
+    fetch('https://api.mccormickhub.com/contact', requestOptions)
     // fetch("https://request-inspector.glitch.me/", requestOptions)
         .then(async response => {
             const isJson = response.headers.get('content-type')?.includes('application/json');
             const data = isJson && await response.json();
             // check for error response
-            if (!response.ok) {
+            if (response.statusCode === 200) {
+                window.location.href = "thankyou.html"
+            }
+            else if (!response.ok) {
                 // get error message from body or default to response status
                 const error = (data && data.message) || response.status;
-                window.location.href = "thankyou.html"
                 return Promise.reject(error);
             }
             // document.getElementById(alert).innerHTML = data.updatedAt;
