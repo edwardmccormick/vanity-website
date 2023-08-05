@@ -52,8 +52,8 @@ jobs:
       - name: Find and Replace - Tokenize AWS Hosted Zone Id
         run: find **/*.yaml -type f -exec sed -i ''s/#{AWS_HOSTED_ZONE_ID}#/${{ secrets.AWS_HOSTED_ZONE_ID }}/g'' {} \;
 
-      - name: Zip emailsender Lambda
-        run: zip emailsender src/emailsender.index.js
+#      - name: Zip emailsender Lambda
+#        run: zip emailsender src/emailsender.index.js
 
       - name: Configure AWS Credentials For GitHub Actions
         uses: aws-actions/configure-aws-credentials@v2
