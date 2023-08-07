@@ -75,14 +75,15 @@ jobs:
           no-fail-on-empty-changeset: 1
           role-arn: ${{ secrets.CLOUDFORMATION_ROLE }}
 
-      - name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions from S3 Bucket
-        uses: aws-actions/aws-cloudformation-github-deploy@v1
-        with:
-          name: ${{ secrets.AWS_STACK_NAME }}
-          template: s3://${{ secrets.S3_CODEBUCKET_NAME }}-us-east-1/static-website-cloudformation.yaml
-          timeout-in-minutes: 60
-          no-fail-on-empty-changeset: 1
-          role-arn: ${{ secrets.CLOUDFORMATION_ROLE }}
+#      - name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions from S3 Bucket
+#        uses: aws-actions/aws-cloudformation-github-deploy@v1
+#        with:
+#          name: ${{ secrets.AWS_STACK_NAME }}
+##          template: s3://${{ secrets.S3_CODEBUCKET_NAME }}-us-east-1/static-website-cloudformation.yaml
+#          template: https://${{ secrets.S3_CODEBUCKET_NAME }}-us-east-1.s3.amazonaws.com/static-website-cloudformation.yaml
+#          timeout-in-minutes: 60
+#          no-fail-on-empty-changeset: 1
+#          role-arn: ${{ secrets.CLOUDFORMATION_ROLE }}
 
       - name: Upload Contents of Repository to S3 Bucket
         run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/ted --exclude "*.md" --exclude ".*" --exclude "tailwind.config.js" --exclude "test.html" --exclude "infrastructure" --exclude "src" --exclude "*.zip"
