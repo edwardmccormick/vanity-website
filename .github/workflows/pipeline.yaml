@@ -79,7 +79,7 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: ${{ secrets.AWS_STACK_NAME }}
-          template: s3://${{ secrets.S3_CODEBUCKET_NAME }}-us-east-1/static-website-cloudformation.yaml
+#          template: s3://${{ secrets.S3_CODEBUCKET_NAME }}-us-east-1/static-website-cloudformation.yaml
           template: https://${{ secrets.S3_CODEBUCKET_NAME }}-us-east-1.s3.amazonaws.com/static-website-cloudformation.yaml
           timeout-in-minutes: 60
           no-fail-on-empty-changeset: 1
