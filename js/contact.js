@@ -27,7 +27,7 @@ function contactSubmit(e) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(bodyJSON)
     };
-    fetch('https://00ln60gbx0.execute-api.us-east-1.amazonaws.com/production/contact', requestOptions)
+    fetch('https://api.mccormickhub.com/contact', requestOptions)
     // fetch("https://request-inspector.glitch.me/", requestOptions)
         .then(async response => {
             const isJson = response.headers.get('content-type')?.includes('application/json');
