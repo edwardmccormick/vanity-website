@@ -146,13 +146,13 @@
             <div class="mb-4 w-full md:w-1/2 pr-4 pl-4 lg:w-1/4 pr-4 pl-4">
                 <label for="source">Reason for your contact</label>
                 <select class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" id="source" name="source">
-                    <option value="applied">You submitted a resume or application</option>
-                    <option value="linkedin">LinkedIn</option>
-                    <option value="website-visitor" selected>Visited Site and wanted to contact</option>
-                    <option value="codeupstaff">Codeup Business Development</option>
-                    <option value="codeupsite">Codeup Website</option>
-                    <option value="socialmedia">Other Social Media</option>
-                    <option value="other">Other</option>
+                    <option value="Resume or Application Follow Up">You submitted a resume or application</option>
+                    <option value="Found through LinkedIn">LinkedIn</option>
+                    <option value="Visited Website" selected>Visited Site and wanted to contact</option>
+                    <option value="Let's Collaborate">I would like to collaborate with you</option>
+                    <option value="Codeup Referral">Codeup Website</option>
+                    <option value="Other Social Media">Other Social Media</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
@@ -160,7 +160,7 @@
 
             <div class="mb-4 w-full md:w-1/2 pr-4 pl-4 lg:w-1/4 pr-4 pl-4">
                 <label for="phone">Contact number?</label>
-                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" name="phone" id="phone" placeholder="(555) 555-555">
+                <input type="text" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded" name="phone" id="phone" placeholder="(555) 555-555" pattern="/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g">
             </div>
             <div class="mb-4 w-full">
                 <label for="bodytext">Message</label>
