@@ -92,4 +92,4 @@ jobs:
         run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/ted --exclude "*.md" --exclude ".*" --exclude "tailwind.config.js" --exclude "test.html" --exclude "infrastructure" --exclude "src" --exclude "*.zip"
 
       - name: Upload EmailSender lambda code
-        run: aws lambda update-function-code --function-name EmailSender --zip-file src/emailsender/*.zip
+        run: aws lambda update-function-code --function-name EmailSender --zip-file src/emailsender/emailsender.zip
