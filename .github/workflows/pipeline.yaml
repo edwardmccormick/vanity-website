@@ -52,8 +52,8 @@ jobs:
       - name: Find and Replace - Tokenize AWS Hosted Zone Id
         run: find **/*.yaml -type f -exec sed -i ''s/#{AWS_HOSTED_ZONE_ID}#/${{ secrets.AWS_HOSTED_ZONE_ID }}/g'' {} \;
 
-#      - name: Zip emailsender Lambda
-#        run: zip emailsender src/emailsender.index.js
+      - name: Zip emailsender Lambda
+        run: zip src/emailsender/emailsender src/emailsender/index.js
 
       - name: Configure AWS Credentials For GitHub Actions
         uses: aws-actions/configure-aws-credentials@v2
@@ -65,6 +65,9 @@ jobs:
 
       - name: Upload Cloudformation Templates to S3 Codebucket
         run: aws s3 sync infrastructure/. s3://${{ secrets.S3_CODEBUCKET_NAME }}
+
+      - name: Upload Lambda Zip Files to S3 Codebucket
+        run: aws s3 cp src/emailsender/*.zip s3://${{ secrets.S3_CODEBUCKET_NAME }}
 
       - name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions Locally
         uses: aws-actions/aws-cloudformation-github-deploy@v1
@@ -79,11 +82,14 @@ jobs:
 #        uses: aws-actions/aws-cloudformation-github-deploy@v1
 #        with:
 #          name: ${{ secrets.AWS_STACK_NAME }}
-##          template: s3://${{ secrets.S3_CODEBUCKET_NAME }}-us-east-1/static-website-cloudformation.yaml
-#          template: https://${{ secrets.S3_CODEBUCKET_NAME }}-us-east-1.s3.amazonaws.com/static-website-cloudformation.yaml
+##          template: s3://${{ secrets.S3_CODEBUCKET_NAME }}/static-website-cloudformation.yaml
+#          template: https://${{ secrets.S3_CODEBUCKET_NAME }}.s3.amazonaws.com/static-website-cloudformation.yaml
 #          timeout-in-minutes: 60
 #          no-fail-on-empty-changeset: 1
 #          role-arn: ${{ secrets.CLOUDFORMATION_ROLE }}
 
       - name: Upload Contents of Repository to S3 Bucket
         run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/ted --exclude "*.md" --exclude ".*" --exclude "tailwind.config.js" --exclude "test.html" --exclude "infrastructure" --exclude "src" --exclude "*.zip"
+
+      - name: Upload EmailSender lambda code
+        run: aws lambda update-function-code --function-name EmailSender --zip-file src/emailsender/emailsender.zip
