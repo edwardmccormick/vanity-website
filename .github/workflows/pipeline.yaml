@@ -52,6 +52,10 @@ jobs:
       - name: Find and Replace - Tokenize AWS Hosted Zone Id
         run: find **/*.yaml -type f -exec sed -i ''s/#{AWS_HOSTED_ZONE_ID}#/${{ secrets.AWS_HOSTED_ZONE_ID }}/g'' {} \;
 
+      - name: Find and Replace - Tokenize AWS Hosted Zone Id
+        run: find **/*.yaml -type f -exec sed -i ''s/#{AWS_LAMBDA_EXECUTION_ROLE}#/${{ secrets.AWS_LAMBDA_EXECUTION_ROLE }}/g'' {} \;
+
+
       - name: Zip emailsender Lambda
         run: zip src/emailsender/emailsender src/emailsender/index.js
 
@@ -91,5 +95,5 @@ jobs:
       - name: Upload Contents of Repository to S3 Bucket
         run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/ted --exclude "*.md" --exclude ".*" --exclude "tailwind.config.js" --exclude "test.html" --exclude "infrastructure" --exclude "src" --exclude "*.zip"
 
-      - name: Upload EmailSender lambda code
-        run: aws lambda update-function-code --function-name EmailSender --zip-file fileb://src/emailsender/emailsender.zip
+#      - name: Upload EmailSender lambda code
+#        run: aws lambda update-function-code --function-name EmailSender --zip-file fileb://src/emailsender/emailsender.zip
