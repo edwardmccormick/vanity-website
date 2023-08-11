@@ -14,7 +14,10 @@ export const handler = async (event) => {
 
     console.log("Event looks like: ", event)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 30d8f12d87e99dfbeff809a579f43b1c826868ea
     // console.log('event.body looks like: ',event.body)
 
     const bodyJson = event
@@ -42,7 +45,10 @@ export const handler = async (event) => {
     console.log("The output from the JSON attempt is: \n", bodyJson)
 
     console.log("Stringifying the bodyJson results in: \n", JSON.stringify(bodyJson))
+<<<<<<< HEAD
 
+=======
+>>>>>>> 30d8f12d87e99dfbeff809a579f43b1c826868ea
     console.log("The email from the JSON (used as a to address) is: ", bodyJson.email)
 
     let emailBodyHtml = `Hello ${bodyJson.name}!<br>
@@ -66,24 +72,64 @@ export const handler = async (event) => {
     
     `
 
+<<<<<<< HEAD
 
     console.log("The emailBodyHtml looks like: ",emailBodyHtml)
 
+=======
+    console.log("The emailBodyHtml looks like: ",emailBodyHtml)
+
+    const input = { // SendEmailRequest
+        FromEmailAddress: "postmaster@mccormickhub.com",
+        Destination: { // Destination
+            ToAddresses: [ // EmailAddressList
+                "ted.mccormick@gmail.com", bodyJson.email
+            ],
+        },
+        Content: { // EmailContent
+            Simple: { // Message
+                Subject: { // Content
+                    Data: `${bodyJson.source}: Contact Me from Website`,
+                },
+                Body: { // Body
+                    Html: {
+                        Data: emailBodyHtml,
+                    },
+                },
+            },
+        },
+
+    };
+
+>>>>>>> 30d8f12d87e99dfbeff809a579f43b1c826868ea
     const command = new SendEmailCommand(input);
 
     try {
         await sesClient.send(command)
         const response = {
+<<<<<<< HEAD
             statusCode: 200,
             headers: {
                 "Access-Control-Allow-Headers" : "Content-Type",
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Methods": "OPTIONS,POST"
+=======
+            "statusCode": 200,
+            "ok": true,
+            headers: {
+                "Access-Control-Allow-Headers" : "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "OPTIONS,POST",
+                "content-type": "application/json"
+>>>>>>> 30d8f12d87e99dfbeff809a579f43b1c826868ea
             },
             body: "Thanks for contact me! And for checking your console to see this! I'll be back in touch with you shortly!"
         };
         return response
+<<<<<<< HEAD
 
+=======
+>>>>>>> 30d8f12d87e99dfbeff809a579f43b1c826868ea
     } catch (e) {
         console.error("Failed to send email.");
         return e;

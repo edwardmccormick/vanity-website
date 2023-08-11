@@ -16,9 +16,19 @@ function toggleDisable(elements) {
 function contactSubmit(e) {
     e.preventDefault();
 
+<<<<<<< HEAD
     let bodyJSON = {email: emailform.value,name: nameform.value,phone: phoneform.value,source: sourceform.value, bodtext: bodytextform.value}
 
     console.log("bodyJSON looks like: \n",bodyJSON)
+=======
+    if (emailform.value.match)
+    if (nameform.value.match)
+    if (phoneform.value.match(/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g))
+
+    let bodyJSON = {email: emailform.value,name: nameform.value,phone: phoneform.value,source: sourceform.value, bodtext: bodytextform.value}
+
+    // console.log("bodyJSON looks like: \n",bodyJSON)
+>>>>>>> 30d8f12d87e99dfbeff809a579f43b1c826868ea
 
     toggleDisable([emailform,nameform,phoneform,sourceform,bodytextform])
     const requestOptions = {
@@ -31,13 +41,27 @@ function contactSubmit(e) {
     // fetch("https://request-inspector.glitch.me/", requestOptions)
         .then(async response => {
             const isJson = response.headers.get('content-type')?.includes('application/json');
+            console.log("isJson :", isJson)
             const data = isJson && await response.json();
+            // console.log("data: ", data)
+            // console.log("response.statusCode: ", response.statusCode)
+            // console.log("data.statusCode: ", data.statusCode)
             // check for error response
+<<<<<<< HEAD
             if (response.statusCode === 200) {
                 window.location.href = "thankyou.html"
             }
             else if (!response.ok) {
                 // get error message from body or default to response status
+=======
+            if (data.statusCode == 200) {
+                console.log("Everything's okay from the async response!")
+                window.location.href = "thankyou.html"
+            }
+            else if (data.statusCode == 200) {
+                // get error message from body or default to response status
+                console.log("Uh oh, got an error, how'd that happen?")
+>>>>>>> 30d8f12d87e99dfbeff809a579f43b1c826868ea
                 const error = (data && data.message) || response.status;
                 return Promise.reject(error);
             }
@@ -69,6 +93,5 @@ let phoneform
 let sourceform
 let bodytextform
 let contactButton
-
 
 

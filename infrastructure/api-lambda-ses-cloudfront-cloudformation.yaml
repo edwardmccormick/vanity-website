@@ -8,6 +8,7 @@ Description: >-
   based on the information received).
 Resources:
     McCormickHubApiGateway:
+<<<<<<< HEAD
     Type: AWS::ApiGatewayV2::Api
     Properties:
       CorsConfiguration:
@@ -87,3 +88,128 @@ Resources:
 #      ResponseParameters: Json
       TimeoutInMillis: 3000
       
+=======
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        Description: 'This API supports the contact me functionality/page of the static site hosted at www.ted.mccormickhub.com'
+        Name: 'mccormickhubapi'
+        EndpointConfiguration:
+          Types:
+            - REGIONAL
+    McCormickHubEmailSenderLambda:
+      Type: AWS::Lambda::Function
+      Properties:
+        Architectures:
+          - 'x86_64'
+        Code:
+          S3Bucket: {{CodeBucket}}
+          S3Key: emailsender.zip
+        FunctionName: emailsender
+        MemorySize: 128
+        PackageType: ZIP
+        Role: {{AWS_LAMBDA_EXECUTION_ROLE}}
+        Runtime: nodejs18.x
+        Tags:
+          - Tag
+        Timeout: 30
+    McCormickHubRestApiContactResource:
+      Type: 'AWS::ApiGateway::Resource'
+      Properties:
+        RestApiId: !Ref McCormickHubApiGateway
+        ParentId: !GetAtt
+          - McCormickHubApiGateway
+          - RootResourceId
+        PathPart: contact
+    McCormickHubApiGatewayContactIntegrationPost:
+      Type: AWS::ApiGateway::Method
+      Properties:
+        HttpMethod: 'Post'
+        Integration:
+          Type: AWS_PROXY
+          IntegrationHttpMethod: POST
+          Uri: !Join ["",["arn:aws:apigateway:",!Ref "AWS::Region", ":lambda:path/2015-03-31/functions/", !Ref McCormickHubEmailSenderLambda,"/invocations"]]
+          IntegrationResponses:
+            - StatusCode: 200
+              ResponseTemplates: {"application/json":""}
+        MethodResponses:
+          - StatusCode: 200
+            ResponseModels: { "application/json": "Empty" }
+        ResourceId: !Ref McCormickHubRestApiContactResource
+        RestApiId: !Ref McCormickHubApiGateway
+    McCormickHubApiGatewayContactIntegrationOptions:
+      Type: "AWS::ApiGateway::Method"
+      Properties:
+        ResourceId: !Ref McCormickHubRestApiContactResource
+        RestApiId: !Ref McCormickHubApiGateway
+        AuthorizationType: NONE
+        HttpMethod: OPTIONS
+        Integration:
+          Type: MOCK
+          IntegrationResponses:
+            - ResponseParameters:
+                method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+                method.response.header.Access-Control-Allow-Methods: "'GET,POST,PUT,DELETE,OPTIONS'"
+                method.response.header.Access-Control-Allow-Origin: "'*'"
+              ResponseTemplates:
+                application/json: ''
+              StatusCode: '200'
+          PassthroughBehavior: NEVER
+          RequestTemplates:
+            application/json: '{"statusCode": 200}'
+        MethodResponses:
+          - ResponseModels:
+              application/json: Empty
+            ResponseParameters:
+              method.response.header.Access-Control-Allow-Headers: true
+              method.response.header.Access-Control-Allow-Methods: true
+              method.response.header.Access-Control-Allow-Origin: true
+            StatusCode: '200'
+    McCormickHubApiDeployment:
+      Deployment:
+        Type: 'AWS::ApiGateway::Deployment'
+        Properties:
+          RestApiId: !Ref McCormickHubApiGateway
+          Description: "No other environments, just Production"
+          StageName: 'production'
+    McCormickHubAPICertificate:
+    Type: 'AWS::CertificateManager::Certificate'
+      Properties:
+        DomainName: 'api.mccormickhub.com'
+        DomainValidationOptions:
+          - DomainName: 'api.mccormickhub.com'
+            HostedZoneId: '#{AWS_HOSTED_ZONE_ID}#'
+        ValidationMethod: DNS
+    APICloudfront:
+      Type: 'AWS::CloudFront::Distribution'
+      Properties:
+        DistributionConfig:
+          Origins:
+            - DomainName: !Join
+                - ''
+                - - 'https://'
+                  - !Ref McCormickHubApiGateway
+                  - .execute-api.
+                  - !Ref 'AWS::Region'
+                  - .amazonaws.com
+              Id: APIOrigin
+              OriginPath: /production
+              CustomOriginConfig:
+                HTTPPort: '80'
+                HTTPSPort: '443'
+                OriginProtocolPolicy: https-only
+          DefaultCacheBehavior:
+            Compress: true
+            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+            OriginRequestPolicyId: 59781a5b-3903-41f3-afcb-af62929ccde1
+            TargetOriginId: APIOrigin
+            ViewerProtocolPolicy: redirect-to-https
+          Enabled: 'true'
+          Aliases:
+            - api.mccormickhub.com
+          ViewerCertificate:
+            AcmCertificateArn: !Ref McCormickHubAPICertificate
+            SslSupportMethod: sni-only
+      DeletionPolicy: Delete
+      UpdateReplacePolicy: Delete
+
+>>>>>>> 30d8f12d87e99dfbeff809a579f43b1c826868ea
