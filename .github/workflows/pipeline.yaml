@@ -92,6 +92,15 @@ jobs:
       - name: Upload Contents of Repository to S3 Bucket
         run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/ted --exclude "*.md" --exclude ".*" --exclude "tailwind.config.js" --exclude "test.html" --exclude "infrastructure" --exclude "src" --exclude "*.zip"
 
+#      - name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions Locally
+#        uses: aws-actions/aws-cloudformation-github-deploy@v1
+#        with:
+#          name: ${{ secrets.AWS_STACK_NAME_API }}
+#          template: infrastructure/static-website-cloudformation.yaml
+#          timeout-in-minutes: 60
+#          no-fail-on-empty-changeset: 1
+#          role-arn: ${{ secrets.CLOUDFORMATION_ROLE }}
+
 #      - name: Upload EmailSender lambda code
 #        run: aws lambda update-function-code --function-name EmailSender --zip-file fileb://src/emailsender/emailsender.zip
 
