@@ -23,13 +23,12 @@ Resources:
         Code:
           S3Bucket: {{CodeBucket}}
           S3Key: emailsender.zip
+          Handler: index.js
         FunctionName: emailsender
         MemorySize: 128
-        PackageType: ZIP
+        PackageType: 'Zip'
         Role: {{AWS_LAMBDA_EXECUTION_ROLE}}
         Runtime: nodejs18.x
-        Tags:
-          - Tag
         Timeout: 30
     McCormickHubRestApiContactResource:
       Type: 'AWS::ApiGateway::Resource'
@@ -45,7 +44,7 @@ Resources:
         HttpMethod: 'Post'
         Integration:
           Type: AWS_PROXY
-          IntegrationHttpMethod: POST
+          IntegrationHttpMethod: 'POST'
           Uri: !Join ["",["arn:aws:apigateway:",!Ref "AWS::Region", ":lambda:path/2015-03-31/functions/", !Ref McCormickHubEmailSenderLambda,"/invocations"]]
           IntegrationResponses:
             - StatusCode: 200
@@ -91,13 +90,13 @@ Resources:
           Description: "No other environments, just Production"
           StageName: 'production'
     McCormickHubAPICertificate:
-    Type: 'AWS::CertificateManager::Certificate'
-      Properties:
-        DomainName: 'api.mccormickhub.com'
-        DomainValidationOptions:
-          - DomainName: 'api.mccormickhub.com'
-            HostedZoneId: '#{AWS_HOSTED_ZONE_ID}#'
-        ValidationMethod: DNS
+      Type: 'AWS::CertificateManager::Certificate'
+        Properties:
+          DomainName: 'api.mccormickhub.com'
+          DomainValidationOptions:
+            - DomainName: 'api.mccormickhub.com'
+              HostedZoneId: '#{AWS_HOSTED_ZONE_ID}#'
+          ValidationMethod: DNS
     APICloudfront:
       Type: 'AWS::CloudFront::Distribution'
       Properties:
