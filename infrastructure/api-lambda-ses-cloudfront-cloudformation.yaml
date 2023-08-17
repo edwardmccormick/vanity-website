@@ -52,6 +52,7 @@ Resources:
         MethodResponses:
           - StatusCode: 200
             ResponseModels: { "application/json": "Empty" }
+        AuthorizationType: "NONE"
         ResourceId: !Ref McCormickHubRestApiContactResource
         RestApiId: !Ref McCormickHubApiGateway
     McCormickHubApiGatewayContactIntegrationOptions:
