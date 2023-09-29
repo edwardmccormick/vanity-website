@@ -140,7 +140,7 @@
     <h1 class="text-center text-4xl">Edward C. "Ted" McCormick</h1><br><br>
     <h2 class="text-center text-lg"><strong>DevOps Engineer and Software Developer</strong></h2>
     <p class="text-base">
-        Former Navy officer and DevOps engineer with engineering leadership experience, strong communication skills, and a diverse technical background. I’m passionate about implementing technically-challenging, value-added projects while continuing to add new skills and grow mastery with my current skill set.</p>
+        AWS Certified DevOps engineer, software developer, and former naval officer with engineering leadership experience, strong communication skills, and a diverse technical background. I’m passionate about implementing technically-challenging, value-added projects while continuing to add new skills and grow mastery with my current skill set.</p>
 
 <br>
 <br>
@@ -160,6 +160,12 @@
 
             </ul>
             <br>
+
+
+        <h6 class="text-md text-left"><strong>CodeUp – San Antonio, TX	<span class="text-right">November ‘20 – July ‘21</span></strong></h6>
+        <div class="text-left text-base">
+            <p class="mb-0">A fully-immersive, project-based, and intensive 22-week full-stack Java career accelerator that provides students with 670+ hours of expert instruction in software development. After graduation, partnered with local entrepreneurs as an ad hoc, freelance developer to translate business ideas and strategies into functional software applications.</p>
+        </div>
     </div>
     <hr class="featurette-divider">
     <br>
@@ -243,22 +249,103 @@
     <hr class="featurette-divider">
     <br>
             <h5 class="mb-3"><strong>Professional Experience</strong></h5>
-    <div class="text-left">
-            <h6>Stay-at-Home Dad - July '17 - July '21</h6>
-            <h6>USAA Financial Advisors - Financial Advisor - January ’15 – July ‘17</h6>
-            <h6>Edward D. Jones & Co. - Financial Advisor - November ’13 – December ’14</h6>
-            <h6>Safeway, Inc. - Store Manager - June ‘12 – August ’13</h6>
+    <div class="text-left" x-data="{ usaa: false, edjones: false, safeway: false }">
+<!--            <h6>Stay-at-Home Dad - July '17 - July '21</h6>-->
+        <h6 class="hover:underline" @click="usaa = !usaa">
+            <strong><span :class="{ 'hidden': usaa, 'inline': !(usaa) }"> + </span>
+                    <span :class="{ 'hidden': !(usaa), 'inline': usaa }"> - </span>
+                        USAA Financial Advisors - Financial Advisor - January ’15 – July ‘17</strong></h6>
+                <div class="text-left text-base" x-cloak x-show="usaa" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+                    <p class="mb-0">Responsible for working warm leads, both in and outbound, of USAA members or prospective members and providing financial advice, including solutions, after a consultative sales process. Charged with balancing placing members first with hitting sales targets for no-load proprietary mutual funds, assets under management, managed money products, life insurance, and fixed deferred and income annuities.</p>
+                    <br>
+                    <ul class="mb-0 list-disc list-inside">
+                        <li>Provided multiple training sessions to other advisors to improve advisor efficacy in investments and life insurance, focusing on efficacy with managed money products and user experience</li>
+                        <li>Promoted early from Financial Advisor III to Financial Advisor II</li>
+                        <li>By focusing on user experience and seamless user interface, averaged $750k in assets gathered and approximately $10k in insurance premiums monthly</li>
+                    </ul>
+                    <br>
+                </div>
+            <h6 class="hover:underline" @click="edjones = !edjones"><strong>
+                <span :class="{ 'hidden': edjones, 'inline': !(edjones) }"> + </span>
+                <span :class="{ 'hidden': !(edjones), 'inline': edjones }"> - </span>
+                Edward D. Jones & Co. - Financial Advisor - November ’13 – December ’14</strong></h6>
+                <div class="text-left text-base" x-cloak x-show="edjones" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+                    <p class="mb-0"> Responsible for developing and deepening client relationships, delivering personalized investment advice to help clients achieve their financial goals, and buildingand managing an Edward Jones branch in San Antonio, TX. Approximately $500,000 in assets under care with 25 families and 60 accounts.</p>
+                    <br>
+                    <ul class="mb-0 list-disc list-inside">
+                        <li>Provided multiple training sessions to other advisors to improve advisor efficacy in investments and life insurance, focusing on efficacy with managed money products and user experience</li>
+                        <li>Promoted early from Financial Advisor III to Financial Advisor II</li>
+                        <li>By focusing on user experience and seamless user interface, averaged $750k in assets gathered and approximately $10k in insurance premiums monthly, using a consultative sale process from warm lead</li>
+                    </ul>
+                    <br>
+                </div>
+            <h6 class="hover:underline" @click="safeway = !safeway"><strong>
+                <span :class="{ 'hidden': safeway, 'inline': !(safeway) }"> + </span>
+                <span :class="{ 'hidden': !(safeway), 'inline': safeway }"> - </span>
+                Safeway, Inc. - Store Manager - June ‘12 – August ’13</strong></h6>
+                <div class="text-left text-base" x-cloak x-show="safeway" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+                    <p class="mb-0">Responsible for all aspects of profitability, maintenance, customer service and human resources of a business unit with $500k in annual revenue and $17.5 million in annual sales located in the highly competitive Washington DC Metro marketplace. Directed execution of over 1,000 discrete marketing initiatives, 150 customer service improvement meetings, and all aspects of employment of 80 direct-reporting employees. Selected for early promotionby senior management into a high opportunity business unit.</p>
+                    <br>
+                    <ul class="mb-0 list-disc list-inside">
+                        <li>With a customer-centric focus, achieved a 2 % sales increase over previous management team –an increase from .5% sales increase year-to-date to a 2.5% sales increase with no changes in marketplace factors.</li>
+                        <li>Through both sales increases and stringent fiscal management, increased profits on a year-to-year, same-store basis from an $11k loss to $140k in profit during initial quarter as assigned manager.</li>
+                        <li>By focusing on controllable costs, improved total profit margin from -.3% to 3.59% of total sales.</li>
+                        <li>Through customer and employee engagement, improved customer service scores from 5/10 in the previous quarter to 8/10 in first assigned quarter as manager.</li>
+                        <li>By strengthening and maintaining business-to-business relationships with vendors and account representatives, reduced non-perishable inventory losses from 2.9% to 2.4% (with a target of 2.8%) in sales volume, preventing $50k in losses.</li>
+                    </ul>
+                    <br>
+                </div>
     </div>
 
             <br>
             <h5 class="mb-3"><strong>Military Experience: US Navy Lieutenant</strong></h5>
-    <div class="text-left">
-            <h6>USS MAHAN (DDG-72) - Training Officer - May ‘09 – June ‘12</h6>
-            <h6>USS LEYTE GULF (CG-55) - Auxiliaries Officer - May ‘07 - May ’09</h6>
-
+    <div class="text-left" x-data="{ mahan: false, leytegulf: false }">
+            <h6 class=hover:underline" @click="mahan = !mahan"><strong>
+                <span :class="{ 'hidden': mahan, 'inline': !(mahan) }"> + </span>
+                <span :class="{ 'hidden': !(mahan), 'inline': mahan }"> - </span>
+                <em>USS MAHAN (DDG-72)</em> - Training Officer - May ‘09 – June ‘12</strong></h6>
+                <div class="text-left text-base" x-cloak x-show="mahan" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+                    <p class="mb-0">Synchronized, scheduled, assessed, and maintained 400 critical, ship-wide certification requirements for multiple assessments. Areas evaluated include sustainment capacity, combat capability, and engineering operability and encompass crew training, qualifications, proficiency, maintenance practices, equipment reliability, damage control, administrative, and supply chain practices. Orchestrated 1,500 Navy school requirements for 280 sailors, 5,000 personnel qualification standards, and individualized training plans for 32 divisions, 5 departments, and 20 officers. As a collateral duty, managed the command’s $80,000 travel budget. Routinely led teams of up to 50 officers and sailors in high-visibility operational roles.</p>
+                    <br>
+                    <ul class="mb-0 list-disc list-inside">
+                        <li>Used thorough understanding of requirements to successfully complete 4 major assessments, certifying as deployment-ready and consistently earning praise as “best on the waterfront.”</li>
+                        <li>Cited as an example of engagement and cooperation between afloat assets and assessment groups.</li>
+                        <li>Developed, implemented, and augmented a training regimen that qualified 20 Surface Warfare Officers.</li>
+                        <li>Boosted the ship’s school accomplishment rate from 73% to 98%.</li>
+                        <li>Improved both the ship’s Training Figure of Merit from 75% to 96% and the training process by engaging superiors and subordinates and capturing, quantifying, and correcting discrepancies.</li>
+                    </ul>
+                    <br>
+                </div>
+            <h6 class=hover:underline" @click="leytegulf = !leytegulf"><strong>
+                <span :class="{ 'hidden': leytegulf, 'inline': !(leytegulf) }"> + </span>
+                <span :class="{ 'hidden': !(leytegulf), 'inline': leytegulf }"> - </span>
+                <em>USS LEYTE GULF (CG-55)</em> - Auxiliaries Officer - May ‘07 - May ’09</strong></h6>
+                <div class="text-left text-base" x-cloak x-show="leytegulf" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+                    <p class="mb-0">Supervised the maintenance and operation of all non-propulsion engineering equipment, including 5 air compressors, 2 refrigeration plants, 4 chill water/air conditioning plants, 10 pumps for various liquid service systems, 2 ship’s boats, 2 pneumatic davits, and the flight deck and aviation recovery system – $100 million worth of equipment in total. As the Ship’s Maintenance Management Officer, a role normally filled by an officer 12-16 years senior, in charge of identifying, scheduling, and ensuring satisfactory completion of all work accomplished by outside maintenance activities and responsible for the effective use of a $3.3 million budget. Led and directly supervised 15 technicians.</p>
+                    <br>
+                    <ul class="mb-0 list-disc list-inside">
+                        <li>Despite a fiscally restrained climate, successfully facilitated a $2.1 million maintenance budget augment through written and verbal advocacy to maintain optimum mission readiness.</li>
+                        <li>100% advancement rate for technicians, including a “Sailor of the Year”.</li>
+                    </ul>
+                    <br>
+                </div>
     </div>
 <!--        </div>-->
 <!--    </div>-->
+    <br>
+    <h5 class="mb-3"><strong>Education / Certifications</strong></h5>
+    <div class="text-left" x-data="{ mahan: false, leytegulf: false }">
+        <h6 class=hover:underline" @click="mahan = !mahan"><strong>United States Naval Academy, Annapolis, Maryland<br>
+        Bachelor of Science - Political Science - International Relations</strong></h6>
+        <br>
+
+        <br>
+        <div class="flex flex-row justify-around">
+            <a href="https://www.credly.com/badges/af4afb38-c817-461f-823f-64bf601f1dfb/public_url" target="_blank"> <img src="https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="AWS Cloud Practitioner" width="160" height="160" /> </a>
+            <a href="https://www.credly.com/badges/fa4eab4d-a68a-420a-ae3e-b30343171083/public_url" target="_blank"> <img src="https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Cloud Developer" width="160" height="160" /> </a>
+        </div>
+    </div>
+
 </div>
 </main>
 <footer class="text-gray-800 bg-gray-300 body-font sticky top-[100vh]">
