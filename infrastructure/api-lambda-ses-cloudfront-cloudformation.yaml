@@ -30,6 +30,36 @@ Resources:
         Role: {{AWS_LAMBDA_EXECUTION_ROLE}}
         Runtime: nodejs18.x
         Timeout: 30
+    McCormickHubBlogPosterLambda:
+      Type: AWS::Lambda::Function
+      Properties:
+        Architectures:
+          - 'x86_64'
+        Code:
+          S3Bucket: {{CodeBucket}}
+          S3Key: blogposter.zip
+          Handler: blogposter.py
+        FunctionName: blogposter
+        MemorySize: 128
+        PackageType: 'Zip'
+        Role: {{AWS_LAMBDA_EXECUTION_ROLE}}
+        Runtime: python3
+        Timeout: 30
+    McCormickHubBlogReaderLambda:
+      Type: AWS::Lambda::Function
+      Properties:
+        Architectures:
+          - 'x86_64'
+        Code:
+          S3Bucket: {{CodeBucket}}
+          S3Key: blogreader.zip
+          Handler: blogreader.py
+        FunctionName: blogreader
+        MemorySize: 128
+        PackageType: 'Zip'
+        Role: {{AWS_LAMBDA_EXECUTION_ROLE}}
+        Runtime: python3
+        Timeout: 30
     McCormickHubRestApiContactResource:
       Type: 'AWS::ApiGateway::Resource'
       Properties:
@@ -83,6 +113,14 @@ Resources:
               method.response.header.Access-Control-Allow-Methods: true
               method.response.header.Access-Control-Allow-Origin: true
             StatusCode: '200'
+    McCormickHubRestApiBlogResource:
+      Type: 'AWS::ApiGateway::Resource'
+      Properties:
+        RestApiId: !Ref McCormickHubApiGateway
+        ParentId: !GetAtt
+          - McCormickHubApiGateway
+          - RootResourceId
+        PathPart: contact
     McCormickHubApiDeployment:
       Deployment:
         Type: 'AWS::ApiGateway::Deployment'
@@ -90,6 +128,34 @@ Resources:
           RestApiId: !Ref McCormickHubApiGateway
           Description: "No other environments, just Production"
           StageName: 'production'
+    McCormickHubApiGatewayBlogIntegrationOptions:
+      Type: "AWS::ApiGateway::Method"
+      Properties:
+        ResourceId: !Ref McCormickHubRestApiBlogResource
+        RestApiId: !Ref McCormickHubApiGateway
+        AuthorizationType: NONE
+        HttpMethod: OPTIONS
+        Integration:
+          Type: MOCK
+          IntegrationResponses:
+            - ResponseParameters:
+                method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+                method.response.header.Access-Control-Allow-Methods: "'GET,POST,PUT,DELETE,OPTIONS'"
+                method.response.header.Access-Control-Allow-Origin: "'*'"
+              ResponseTemplates:
+                application/json: ''
+              StatusCode: '200'
+          PassthroughBehavior: NEVER
+          RequestTemplates:
+            application/json: '{"statusCode": 200}'
+        MethodResponses:
+          - ResponseModels:
+              application/json: Empty
+            ResponseParameters:
+              method.response.header.Access-Control-Allow-Headers: true
+              method.response.header.Access-Control-Allow-Methods: true
+              method.response.header.Access-Control-Allow-Origin: true
+            StatusCode: '200'
     McCormickHubAPICertificate:
       Type: 'AWS::CertificateManager::Certificate'
         Properties:
