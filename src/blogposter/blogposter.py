@@ -1,5 +1,6 @@
 import json
 import boto3
+import time
 
 def lambda_handler(event, context):
     # Define the required passcode
@@ -7,7 +8,6 @@ def lambda_handler(event, context):
 
     # Parse the input JSON from the event
     request_body = json.loads(event['body'])
-    request_title = json.loads(event['title'])
 
     # Check if the passcode matches the required passcode
     if 'passcode' not in request_body or request_body['passcode'] != required_passcode:
@@ -28,14 +28,21 @@ def lambda_handler(event, context):
     # Prepare the item to be put into DynamoDB
     item = {
         'Timestamp': {'S': timestamp},
-        'Body': {'S': json.dumps(request_body.body)}
-        'Title': {'S': json.dumps(request_body.title)}
+        'Title': {'S': request_body.get('Title', '')},
+        'Body': {'S': request_body.get('Body', '')}
     }
 
     # Put the item into DynamoDB
     dynamodb.put_item(TableName=table_name, Item=item)
 
+    # Return the response with 'Title', 'Body', and 'Timestamp'
+    response = {
+        'Title': request_body.get('Title', ''),
+        'Body': request_body.get('Body', ''),
+        'Timestamp': timestamp
+    }
+
     return {
         'statusCode': 200,
-        'body': json.dumps('Data saved to DynamoDB successfully!')
+        'body': json.dumps(response)
     }
