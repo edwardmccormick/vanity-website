@@ -1,3 +1,10 @@
+---
+const { pathname } = Astro.url;
+const isHome = pathname === '/' || pathname === '/index.html';
+const isResume = pathname === '/resume' || pathname.startsWith('/resume/');
+const isAbout = pathname === '/about' || pathname.startsWith('/about/');
+---
+
 <nav class="bg-gray-800" x-data="{ open: false }">
 	<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 		<div class="relative flex h-16 items-center justify-between">
@@ -52,13 +59,18 @@
 					<div class="flex space-x-4">
 						<a
 							href="/index.html"
-							class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-							aria-current="page"
+							class={`rounded-md px-3 py-2 text-sm font-medium ${
+								isHome ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+							}`}
+							aria-current={isHome ? 'page' : undefined}
 							>Home</a
 						>
 						<a
-							href="/resume.html"
-							class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+							href="/resume"
+							class={`rounded-md px-3 py-2 text-sm font-medium ${
+								isResume ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+							}`}
+							aria-current={isResume ? 'page' : undefined}
 							>Resume</a
 						>
 						<a
@@ -70,6 +82,14 @@
 							href="/contact.html"
 							class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
 							>Contact</a
+						>
+						<a
+							href="/about"
+							class={`rounded-md px-3 py-2 text-sm font-medium ${
+								isAbout ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+							}`}
+							aria-current={isAbout ? 'page' : undefined}
+							>About</a
 						>
 					</div>
 				</div>
@@ -170,12 +190,20 @@
 
 		<div class="sm:hidden" id="mobile-menu" x-show="open" style="display: none;">
 			<div class="space-y-1 px-2 pb-3 pt-2">
-				<a href="/index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+				<a
+					href="/index.html"
+					class={`block rounded-md px-3 py-2 text-base font-medium ${
+						isHome ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+					}`}
+					aria-current={isHome ? 'page' : undefined}
 					>Home</a
 				>
 				<a
-					href="/resume.html"
-					class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+					href="/resume"
+					class={`block rounded-md px-3 py-2 text-base font-medium ${
+						isResume ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+					}`}
+					aria-current={isResume ? 'page' : undefined}
 					>Resume</a
 				>
 				<a
@@ -187,6 +215,14 @@
 					href="/contact.html"
 					class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
 					>Contact</a
+				>
+				<a
+					href="/about"
+					class={`block rounded-md px-3 py-2 text-base font-medium ${
+						isAbout ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+					}`}
+					aria-current={isAbout ? 'page' : undefined}
+					>About</a
 				>
 			</div>
 		</div>

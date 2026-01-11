@@ -5,3 +5,4 @@ js/keys.js
 node_modules/*
 *.zip
 venv/*
+node_modules
