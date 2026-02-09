@@ -1,4 +1,4 @@
-.idea/*
+.idea/
 *.iml
 .DS_STORE
 js/keys.js
@@ -6,3 +6,5 @@ node_modules/*
 *.zip
 venv/*
 node_modules
+blog/
+!src/Blog/app/src/content/blog/

@@ -43,6 +43,19 @@ jobs:
         uses: actions/checkout@v3
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: src/Blog/app/package-lock.json
+
+      - name: Install Astro Dependencies
+        run: npm ci --prefix src/Blog/app
+
+      - name: Build Astro Site
+        run: npm run build --prefix src/Blog/app
+
       - name: Find and Replace - Tokenize S3 Bucket Name
         run: find **/*.yaml -type f -exec sed -i ''s/#{S3_BUCKET_NAME}#/${{ secrets.S3_BUCKET_NAME }}/g'' {} \;
 
@@ -92,6 +105,9 @@ jobs:
       - name: Upload Contents of Repository to S3 Bucket
         run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}/ted --exclude "*.md" --exclude ".*" --exclude "tailwind.config.js" --exclude "test.html" --exclude "infrastructure" --exclude "src" --exclude "*.zip"
 
+      - name: Upload Astro Build Output to S3 Bucket
+        run: aws s3 sync blog/. s3://${{ secrets.S3_BUCKET_NAME }}/ted/blog
+
 #      - name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions Locally
 #        uses: aws-actions/aws-cloudformation-github-deploy@v1
 #        with:
@@ -103,4 +119,3 @@ jobs:
 
 #      - name: Upload EmailSender lambda code
 #        run: aws lambda update-function-code --function-name EmailSender --zip-file fileb://src/emailsender/emailsender.zip
-

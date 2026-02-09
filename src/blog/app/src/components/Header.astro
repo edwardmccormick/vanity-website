@@ -2,7 +2,9 @@
 const { pathname } = Astro.url;
 const isHome = pathname === '/' || pathname === '/index.html';
 const isResume = pathname === '/resume' || pathname.startsWith('/resume/');
-const isAbout = pathname === '/about' || pathname.startsWith('/about/');
+const isProjects = pathname === '/projects' || pathname.startsWith('/projects/');
+const isContact = pathname === '/contact' || pathname.startsWith('/contact/');
+const isBlog = pathname === '/blog' || pathname.startsWith('/blog/');
 ---
 
 <nav class="bg-gray-800" x-data="{ open: false }">
@@ -66,6 +68,14 @@ const isAbout = pathname === '/about' || pathname.startsWith('/about/');
 							>Home</a
 						>
 						<a
+							href="/blog"
+							class={`rounded-md px-3 py-2 text-sm font-medium ${
+								isBlog ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+							}`}
+							aria-current={isBlog ? 'page' : undefined}
+							>Blog</a
+						>
+						<a
 							href="/resume"
 							class={`rounded-md px-3 py-2 text-sm font-medium ${
 								isResume ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
@@ -74,22 +84,20 @@ const isAbout = pathname === '/about' || pathname.startsWith('/about/');
 							>Resume</a
 						>
 						<a
-							href="/projects.html"
-							class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+							href="/projects"
+							class={`rounded-md px-3 py-2 text-sm font-medium ${
+								isProjects ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+							}`}
+							aria-current={isProjects ? 'page' : undefined}
 							>Projects</a
 						>
 						<a
-							href="/contact.html"
-							class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-							>Contact</a
-						>
-						<a
-							href="/about"
+							href="/contact"
 							class={`rounded-md px-3 py-2 text-sm font-medium ${
-								isAbout ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+								isContact ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
 							}`}
-							aria-current={isAbout ? 'page' : undefined}
-							>About</a
+							aria-current={isContact ? 'page' : undefined}
+							>Contact</a
 						>
 					</div>
 				</div>
@@ -199,6 +207,14 @@ const isAbout = pathname === '/about' || pathname.startsWith('/about/');
 					>Home</a
 				>
 				<a
+					href="/blog"
+					class={`block rounded-md px-3 py-2 text-base font-medium ${
+						isBlog ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+					}`}
+					aria-current={isBlog ? 'page' : undefined}
+					>Blog</a
+				>
+				<a
 					href="/resume"
 					class={`block rounded-md px-3 py-2 text-base font-medium ${
 						isResume ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
@@ -207,22 +223,20 @@ const isAbout = pathname === '/about' || pathname.startsWith('/about/');
 					>Resume</a
 				>
 				<a
-					href="/projects.html"
-					class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+					href="/projects"
+					class={`block rounded-md px-3 py-2 text-base font-medium ${
+						isProjects ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+					}`}
+					aria-current={isProjects ? 'page' : undefined}
 					>Projects</a
 				>
 				<a
-					href="/contact.html"
-					class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-					>Contact</a
-				>
-				<a
-					href="/about"
+					href="/contact"
 					class={`block rounded-md px-3 py-2 text-base font-medium ${
-						isAbout ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+						isContact ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
 					}`}
-					aria-current={isAbout ? 'page' : undefined}
-					>About</a
+					aria-current={isContact ? 'page' : undefined}
+					>Contact</a
 				>
 			</div>
 		</div>
