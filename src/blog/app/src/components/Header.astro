@@ -3,7 +3,11 @@ const { pathname } = Astro.url;
 const isHome = pathname === '/' || pathname === '/index.html';
 const isResume = pathname === '/resume' || pathname.startsWith('/resume/');
 const isProjects = pathname === '/projects' || pathname.startsWith('/projects/');
-const isContact = pathname === '/contact' || pathname.startsWith('/contact/');
+const isContact =
+	pathname === '/contact' ||
+	pathname.startsWith('/contact/') ||
+	pathname === '/thankyou' ||
+	pathname.startsWith('/thankyou/');
 const isBlog = pathname === '/blog' || pathname.startsWith('/blog/');
 ---
 
