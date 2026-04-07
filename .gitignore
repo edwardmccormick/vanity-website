@@ -6,5 +6,5 @@ node_modules/*
 *.zip
 venv/*
 node_modules
-blog/
+src/blog/app/.astro
 !src/Blog/app/src/content/blog/
