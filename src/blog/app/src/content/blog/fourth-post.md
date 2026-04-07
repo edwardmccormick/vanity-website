@@ -1,7 +1,7 @@
 ---
 title: 'Why I Built A Local GitOps And AI Reliability Lab'
 description: 'A practical lab for improving my understanding of Argo CD, GitOps delivery, and the parts of AI reliability that are easy to talk about but harder to demonstrate.'
-pubDate: 'Apr 6 2026'
+pubDate: 'March 20 2026'
 heroImage: '../../assets/Local-GitOps-and-AI-lab-setup.png'
 ---
 
@@ -183,7 +183,7 @@ It ended up becoming a much better artifact than that:
 
 That feels like a good outcome.
 
-If you want images for this post, I would use:
+<!-- If you want images for this post, I would use:
 
 - a screenshot of the Argo CD applications view showing the lab components
 - a screenshot of the AI service Grafana dashboard
@@ -193,4 +193,4 @@ If you want a diagram prompt for ChatGPT image generation, use this:
 
 ```text
 Create a clean editorial illustration for a blog post about building a personal local GitOps and AI reliability lab. Show a developer workstation feeding Git commits into Argo CD, which deploys to a small Kubernetes cluster containing an app, an AI service, Prometheus, Grafana, and a canary rollout path. Style: modern platform engineering diagram, minimalist, crisp labels, light background, professional blog aesthetic, subtle teal and orange highlights, no mascots or people.
-```
+``` -->

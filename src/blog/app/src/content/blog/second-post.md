@@ -1,7 +1,7 @@
 ---
 title: 'What It Took To Make GitOps Image Pinning Actually Work'
 description: 'A postmortem on building a post-merge image build and digest pin flow with GitHub Actions, GHCR, a GitHub App, and Argo CD.'
-pubDate: 'Apr 6 2026'
+pubDate: 'March 31 2026'
 heroImage: '../../assets/GitOps-image-pinning-workflow-explained.png'
 ---
 
@@ -140,7 +140,7 @@ The final design is not “perfect least privilege.” It is:
 
 That is usually the actual engineering target.
 
-If you want to include an image with this post, I would use one of these:
+<!-- If you want to include an image with this post, I would use one of these:
 
 - a screenshot of the PR merge followed by the pinned digest commit in Git history
 - a screenshot of the rollout manifest with the digest plus the running image in Kubernetes
@@ -150,4 +150,4 @@ If you want an AI-generated illustration prompt, use this:
 
 ```text
 Create a clean technical editorial illustration for a blog post about GitOps image pinning. Show a pull request merging into a Git repository, a CI pipeline building a container image, a container registry storing an immutable digest, a bot committing that digest back into Git, and Argo CD deploying the pinned image into a Kubernetes cluster. Style: modern engineering diagram, minimal but polished, dark-on-light, no cartoon characters, subtle blue and orange accents, clear arrows, professional blog-header composition.
-```
+``` -->

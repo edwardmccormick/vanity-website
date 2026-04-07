@@ -129,7 +129,7 @@ The most useful pattern here is not any single tool. It is the layering:
 
 That stack gets you much closer to real platform discipline than a repo that only proves YAML can render.
 
-If you want images for this post, I would use:
+<!-- If you want images for this post, I would use:
 
 - a screenshot of a Trivy finding next to the manifest fix
 - a screenshot of a failed smoke test with useful diagnostics
@@ -139,4 +139,4 @@ If you want an illustration prompt for ChatGPT image generation, use this:
 
 ```text
 Create a professional editorial illustration for a blog post about CI security, Kubernetes smoke tests, and supply chain trust. Show a pipeline with YAML manifests, a security scanner, a disposable Kubernetes cluster, container logs and diagnostics, and a highlighted trust chain from source repository to CI runner to external dependencies to deployed cluster. Style: clean technical infographic, modern SRE/platform engineering aesthetic, light background, restrained colors, no mascots, clear layered flow.
-```
+``` -->
