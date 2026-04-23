@@ -21,7 +21,13 @@ So - if you have a system, where runaway latency compounds and can eventually le
 
 Attack the long tail. Keep the proven, low latency path - but find a way to offload the slowest path. Preferably in a way that's asynchronous.
 
-It felt like an obvious first slice at a Fig Strangler. If you're not familiar with the pattern, reader, it goes something like this: replacing a monolith with a monolith is an errand in folly. You're trying to incorporate some number of years of bugfixes, optimizations, and improvements 
+It felt like an obvious first slice at a Fig Strangler. If you're not familiar with the pattern, reader, it goes something like this: replacing a monolith with a monolith is an errand in folly. You're trying to incorporate some number of years of bugfixes, optimizations, improvements, and lessons learned (to say nothing of features!) into a 'brand new' application.
+
+It's hard. And especially if you're trying to do all that at once, in a way where you have a hard cutover, and oftentimes you don't have a 'safe rollback' option?
+
+It's a recipe for disaster. You're going sky diving, but you've only tried your parachute while you're standing in the hangar - never after throwing yourself out of an airplane.
+
+Fig Stranger is named after, well, the Fig Strangler plant. It does sort of what you'd expect, from the name. It 
 
 I added sideband defer and enrichment emissions without changing the main processing path. In other words, the system started telling the outside world what it was about to do, and why, before I asked it to stop doing that work itself.
 
