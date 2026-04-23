@@ -8,8 +8,8 @@ import Header from '../components/Header.astro';
 <html lang="en">
 	<head>
 		<BaseHead
-			title="Ted McCormick - Software Developer / DevOps Engineer / Cloud Architect"
-			description="This is the personal homepage and/or professional website for Edward C. 'Ted' McCormick, a software developer, DevOps Engineer, and Cloud Architect."
+			title="Ted McCormick | Principal AI Reliability & Quality Engineer"
+			description="Edward C. 'Ted' McCormick is a principal engineer focused on AI reliability, SRE, platform engineering, quality strategy, and modernization in regulated environments."
 		/>
 	</head>
 	<body class="min-h-screen">
@@ -17,27 +17,34 @@ import Header from '../components/Header.astro';
 		<main>
 			<div class="flex flex-col md:flex-row justify-center items-center max-w-7xl xl:mx-auto">
 				<div class="md:hidden">
-					<h1 class="text-4xl text-blue-900">Hi there, my name is Ted.</h1>
+					<h1 class="text-4xl text-blue-900">Ted McCormick</h1>
 				</div>
 				<div class="m-4 w-96 box-content flex-none">
 					<img class="object-none rounded-lg" src="/img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick" />
 				</div>
 				<div class="m-1 p-6 text-center md:text-left flex-1">
-					<h1 class="text-4xl hidden md:inline text-blue-900">Hi there, my name is Ted.</h1>
-					<h2 class="text-lg">I don't make software.</h2>
-					<p>I make the infrastructure and tools that make the software your developers make better.</p>
+					<h1 class="text-4xl hidden md:inline text-blue-900">Ted McCormick</h1>
+					<h2 class="mt-3 text-lg font-semibold">Principal AI Reliability &amp; Quality Engineer</h2>
+					<p class="mt-3">
+						I build the systems, operating standards, and test infrastructure that let engineering teams ship
+						with confidence.
+					</p>
+					<p class="mt-3">
+						My work sits at the intersection of SRE, quality engineering, AI-enabled development, and legacy
+						modernization, with a bias toward pragmatic execution in regulated, high-consequence environments.
+					</p>
 				</div>
 			</div>
 
 			<div class="w-100 m-4">
 				<br />
 				<p class="m-4 p-4">
-					You can take a look at projects I've worked on and my resume above, or click through below to learn a
-					little more about me and my background.
+					Use the site the way a hiring manager, engineering leader, or future collaborator would: review the
+					resume, read the technical writing, and skim the milestones below for the background behind the title.
 				</p>
 				<br />
 				<div
-					class="flex flex-col p-6 m-4 md:p-0 sm:grid-cols-2 sm:gap-3 sm:grid md:grid-cols-3 lg:grid-cols-4 md:gap-6 mx-auto container w-screen sm:min-h-[200vh] lg:min-h-screen grid-flow-row auto-rows-fr"
+					class="flex flex-col p-6 m-4 md:p-0 sm:grid-cols-2 sm:gap-3 sm:grid md:grid-cols-3 lg:grid-cols-4 md:gap-6 mx-auto container w-screen sm:min-h-[240vh] lg:min-h-screen grid-flow-row auto-rows-fr"
 				>
 					<div
 						id="dexter"
@@ -53,10 +60,8 @@ import Header from '../components/Header.astro';
 						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
 							<h3 class="text-lg font-semibold">Dexter, Missouri</h3>
 							<p class="text-base my-2">
-								I was born in southeastern Missouri, and raised there from the time that I was six years old.
-								It's great to grow up in a small town, and Dexter still has a total population of about 7,000.
-								When I visited my friend on the 'wrong side of the tracks' (yes, there was literally a railroad
-								track through Dexter, and there was a 'wrong' side!) my Mom got a call <i>before I got home.</i>
+								I was raised in southeast Missouri. Small-town life tends to wire in accountability early:
+								people know your name, your standards, and whether you follow through. That part stuck.
 							</p>
 						</div>
 					</div>
@@ -76,11 +81,9 @@ import Header from '../components/Header.astro';
 						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
 							<h3 class="text-lg font-semibold">US Naval Academy<br />Annapolis, MD</h3>
 							<p class="text-base my-2">
-								I spent four years "by the Bay". I learned a lot - both about myself, during Plebe year, and
-								what I was capable of surviving and thriving in, and also literally - I graduated with a
-								Bachelor's of Science degree, even though my major was in Political Science. How many Poli-Sci
-								majors do you know with two years of Calculus, and a year each of Electrical Engineering,
-								Physics, and Chemistry?
+								Four years in Annapolis gave me the operational foundation I still rely on: discipline,
+								standards, and composure under pressure. It also gave me a real engineering core behind a
+								political science degree.
 							</p>
 						</div>
 					</div>
@@ -100,9 +103,9 @@ import Header from '../components/Header.astro';
 						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
 							<h3 class="text-lg font-semibold">Surface Warfare Officer</h3>
 							<p class="text-base my-2">
-								I was in the US Navy for six years as a Surface Warfare Officer; part of that time as an
-								engineering Officer, part of that as Training Officer, and did two deployments to the
-								Mediterranean and off Somalia doing Counter-Piracy.
+								I served six years as a Surface Warfare Officer, leading engineering and training programs in
+								operational environments where reliability was not a slogan. That mindset maps cleanly to
+								production engineering.
 							</p>
 						</div>
 					</div>
@@ -122,9 +125,8 @@ import Header from '../components/Header.astro';
 						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
 							<h3 class="text-lg font-semibold">Family Life</h3>
 							<p class="text-base my-2">
-								I got out of the Navy to marry my wonderful wife. We settled in San Antonio because, well, if
-								you want to become a Texan, marry a Texan!<br />
-								My kids are <strong>awesome</strong>. Hectic, occasionally, but always awesome.
+								San Antonio became home after the Navy. Family has a way of clarifying priorities, which is
+								helpful when your job is separating signal from noise and investing effort where it matters.
 							</p>
 						</div>
 					</div>
@@ -144,15 +146,15 @@ import Header from '../components/Header.astro';
 						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
 							<h3 class="text-lg font-semibold">Codeup</h3>
 							<p class="text-base my-2">
-								I joined Codeup in November of 2020, while everyone (and everything) was still remote from
-								Covid, and graduated in May of '21.
+								Codeup was the formal pivot into software, but not the start of technical leadership. It gave
+								me the software delivery vocabulary to pair with years of operational ownership.
 							</p>
 						</div>
 					</div>
 
 					<div
 						id="devops"
-						class="col-span-2 mb-6 text-center order-last md:col-span-3 lg:order-none lg:col-span-2 min-h-screen sm:min-h-0 bg-contain rounded-lg bg-center bg-no-repeat"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-contain rounded-lg bg-center bg-no-repeat"
 						style="background-image: url(/img/devops-infinity.png)"
 						x-data="{ open: false }"
 						@click.self="open = ! open"
@@ -165,10 +167,31 @@ import Header from '../components/Header.astro';
 						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
 							<h3 class="text-lg font-semibold">DevOps</h3>
 							<p class="text-base my-2">
-								Like most DevOps engineers (I think?) I've developed an eclectic set of skills - everything from
-								basic automation and quality-of-life improvements through architecting cloud solutions,
-								including implementing a zero-downtime, blue/green deployment architecture on one of SWBC's
-								most busy serverless applications.
+								My platform work has expanded from deployment automation into reliability leadership, quality
+								gates, incident practice, and modernization strategy. The common thread is reducing risk while
+								increasing engineering throughput.
+							</p>
+						</div>
+					</div>
+
+					<div
+						id="usio"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-contain rounded-lg bg-center bg-no-repeat bg-white"
+						style="background-image: url(/img/cropped-USIO-Logo.png)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						aria-label="Usio brand tile"
+						data-toggle="tooltip"
+						data-placement="top"
+						title="Current chapter: building principal-level reliability and testability where there wasn't a dedicated SRE function before."
+						alt="Usio logo"
+					>
+						<div class="backdrop-blur-sm bg-white/70 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">Usio</h3>
+							<p class="text-base my-2">
+								At Usio, I built the first dedicated SRE function for a high-volume payments environment:
+								runbooks, blameless post-mortems, observability improvements, deterministic test infrastructure,
+								and a credible modernization path for a legacy authorization engine.
 							</p>
 						</div>
 					</div>
@@ -188,8 +211,9 @@ import Header from '../components/Header.astro';
 						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
 							<h3 class="text-lg font-semibold">SWBC</h3>
 							<p class="text-base my-2">
-								I'll always be grateful to SWBC for letting me start my career as a DevOps Engineer. I've been
-								there two years, and I've learned so much (and only brought down production once!).
+								SWBC was where I matured from a career-transition engineer into someone trusted with enterprise
+								deployment patterns, security-sensitive incidents, QA strategy, and platform standards across
+								multiple teams.
 							</p>
 						</div>
 					</div>

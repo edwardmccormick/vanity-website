@@ -1,5 +1,5 @@
 ---
-title: 'Modernizing a Legacy 8583 Engine Without Breaking It'
+title: 'Modernizing a Legacy 8583 Engine Without Breaking It - Or Your Career'
 description: 'How I built testability, observability, and the first deferred strangler path around a fifteen-year-old TCP ISO-8583 processor.'
 pubDate: 'March 14 2026'
 heroImage: '../../assets/Modernizing-legacy-8583-engine-flow.png'

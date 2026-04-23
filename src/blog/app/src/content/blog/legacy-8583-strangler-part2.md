@@ -17,6 +17,12 @@ Astute readers will probably have noticed the tradeoff, though - we were making 
 
 But we were also introducing a TON of potential latencies to our poor single-threaded, 'hot path only' application. Namely - we are completely at the mercy of network latency, but also, of the latency of our partner's systems, as well. There's a two second timeout - if we haven't heard a response from a partner within two seconds, we 'stand in' for the partner and act on the transaction 'ourselves', based on ledger balances of record in our system.
 
+So - if you have a system, where runaway latency compounds and can eventually lead to busting your Service Level Objective - what do you do?
+
+Attack the long tail. Keep the proven, low latency path - but find a way to offload the slowest path. Preferably in a way that's asynchronous.
+
+It felt like an obvious first slice at a Fig Strangler. If you're not familiar with the pattern, reader, it goes something like this: replacing a monolith with a monolith is an errand in folly. You're trying to incorporate some number of years of bugfixes, optimizations, and improvements 
+
 I added sideband defer and enrichment emissions without changing the main processing path. In other words, the system started telling the outside world what it was about to do, and why, before I asked it to stop doing that work itself.
 
 That was the right order.
