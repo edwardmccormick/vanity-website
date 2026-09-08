@@ -6,16 +6,16 @@ A personal/professional website for Edward C. “Ted” McCormick. The site star
 - Root HTML pages (legacy or transition): `index.html`, `resume.html`, `projects.html`, `contact.html`, etc.
 - Shared CSS: `css/` (Tailwind output is `css/build.css`).
 - Shared assets: `img/`, `js/`, root favicons and `site.webmanifest`.
-- Astro app: `src/Blog/app/`
-  - Pages: `src/Blog/app/src/pages/`
-  - Components: `src/Blog/app/src/components/`
-  - Content: `src/Blog/app/src/content/`
-  - Public assets: `src/Blog/app/public/`
+- Astro app: `src/blog/app/`
+  - Pages: `src/blog/app/src/pages/`
+  - Components: `src/blog/app/src/components/`
+  - Content: `src/blog/app/src/content/`
+  - Public assets: `src/blog/app/public/`
 - Infrastructure/IaC: `infrastructure/`
 
 ## Local Development
 ### Astro (primary)
-From `src/Blog/app/`:
+Use Node 24 to match CI. From `src/blog/app/`:
 ```bash
 npm install
 npm run dev
@@ -49,7 +49,8 @@ This copies:
 ## Deployment Notes
 - The site is static and designed for S3/CloudFront hosting.
 - `infrastructure/static-website-cloudformation.yaml` provisions AWS resources.
-- GitHub Actions in `infrastructure/pipeline.yaml` can deploy the site if secrets are configured.
+- GitHub Actions in `.github/workflows/pipeline.yaml` builds pull requests and configured branch pushes with Node 24. Only pushes to `main` deploy, after the build succeeds.
+- Astro writes the complete site to the root `blog/` directory, including its own `blog/` route directory. Upload this output to the S3 `/ted` prefix (CloudFront's origin path), not `/ted/blog`.
 - You can also deploy manually by uploading the generated static output to S3.
 
 ## Migration Status
