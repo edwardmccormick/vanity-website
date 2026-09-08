@@ -21,14 +21,8 @@ const CardFlipFunctionality = plugin(function ({ addUtilities }) {
 
 module.exports = {
   content: [
-      "index.html",
-      "resume.html",
-      "contact.html",
-      "thankyou.html",
-      "projects.html",
-      "test.html",
-      "error.html"
-
+      "*.html",
+      "src/Blog/app/src/**/*.{astro,html,js,jsx,ts,tsx,md,mdx}"
   ],
   theme: {
     extend: {},

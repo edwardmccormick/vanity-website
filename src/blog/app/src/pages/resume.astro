@@ -1,0 +1,244 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="Resume | Ted McCormick | Principal AI Reliability & Quality Engineer"
+			description="Resume for Edward C. 'Ted' McCormick, principal engineer focused on AI reliability, SRE, quality engineering, and platform modernization."
+		/>
+	</head>
+	<body class="min-h-screen">
+		<Header />
+		<main class="max-w-7xl xl:mx-auto">
+			<div class="flex flex-col md:flex-row justify-between">
+				<div class="m-1 p-6 text-center md:text-left">
+					<h1 class="text-xl">Principal AI Reliability &amp; Quality Engineer</h1>
+					<h4 class="text-lg">
+						This version keeps the site-native resume format, but the content now reflects the current role,
+						responsibilities, and positioning. Download links are still available in the standard formats:
+					</h4>
+					<div class="flex flex-row justify-start">
+						<div class="m-4">
+							<a href="/Edward.McCormick.Resume.pdf"
+								><img class="h-8 inline" src="/img/PDF_file_icon.svg" alt="" />
+								<span class="text-xs text-blue-600 dark:text-blue-500 hover:underline">pdf</span></a
+							>
+						</div>
+						<div class="m-4">
+							<a href="/Edward.McCormick.Resume.docx"
+								><img class="h-8 inline" src="/img/Microsoft_Office_Word.svg" alt="" />
+								<span class="text-xs text-blue-600 dark:text-blue-500 hover:underline">docx</span></a
+							>
+						</div>
+						<div class="m-4">
+							<a
+								href="https://docs.google.com/document/d/1BEcuxXajt2zVWn9d8TVd8jJxMUu6vME6/edit?usp=sharing&ouid=105982336078488310621&rtpof=true&sd=true"
+								><img class="h-8 inline" src="/img/Docs-icon.svg" alt="" />
+								<span class="text-xs text-blue-600 dark:text-blue-500 hover:underline">Google Doc</span></a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="w-full text-center m-8 p-3">
+				<h1 class="text-center text-4xl">Edward C. "Ted" McCormick</h1>
+				<br />
+				<br />
+				<h2 class="text-center text-lg"><strong>Principal AI Reliability &amp; Quality Engineer</strong></h2>
+				<p class="text-base">
+					Principal reliability engineer who builds SRE disciplines from zero, hardens AI-enabled workflows,
+					and creates deterministic testing and observability patterns for complex production systems in
+					regulated environments. Brings a Naval officer&apos;s operational discipline, a fintech engineer&apos;s
+					quality instincts, and an AI-native development workflow to reliability and modernization work that
+					has to hold up in production.
+				</p>
+
+				<br />
+				<br />
+				<h5 class="mb-3 text-lg"><strong>Leadership Highlights</strong></h5>
+				<div class="text-left text-base">
+					<ul class="mb-0 list-disc list-inside">
+						<li>Built the first dedicated SRE function for a high-volume fintech platform.</li>
+						<li>Owned enterprise QA strategy, CI quality gates, and shift-left quality practice.</li>
+						<li>Led security-sensitive incident response and post-incident systemic remediation.</li>
+						<li>Use Claude Code, Copilot, and Codex CLI daily to accelerate analysis, testing, and delivery.</li>
+						<li>Apply Naval operational discipline to production readiness, incident ownership, and quality leadership.</li>
+					</ul>
+				</div>
+
+				<br />
+				<hr class="featurette-divider" />
+				<br />
+				<h5 class="mb-3 text-lg"><strong>Professional Experience</strong></h5>
+
+				<h6 class="text-md text-left">
+					<strong>Platform Engineer - Usio <span class="text-right">October &apos;25 - Present</span></strong>
+				</h6>
+				<div class="text-left text-base">
+					<p class="mb-0">
+						Founded and built the first dedicated SRE function for a high-volume payment processing
+						environment, introducing incident practice, observability improvements, deterministic testing,
+						and a formal modernization path for a legacy authorization stack.
+					</p>
+					<br />
+					<ul class="mb-0 list-disc list-inside">
+						<li>
+							Established blameless post-mortem standards and a runbook library across six production
+							incidents with explicit recovery, RCA, hotfix, and remediation targets.
+						</li>
+						<li>
+							Built deterministic integration testing infrastructure for a legacy .NET payment authorization
+							engine using Dockerized SQL Server, controllable external-auth mocks, and a Go-based SOAP/SQL
+							test harness.
+						</li>
+						<li>
+							Improved observability in a high-risk external authorization path by restructuring
+							request-level logging and surfacing malformed upstream responses without adding latency to the
+							critical path.
+						</li>
+						<li>
+							Architected a strangler-pattern modernization strategy for a 15-year-old payment monolith with
+							shadow traffic, broker-based flows, feature flags, idempotency improvements, and rollback-safe
+							sequencing.
+						</li>
+						<li>
+							Applied AI-assisted engineering to take a fragmented, two-year-stalled test harness effort to
+							production-ready state over a single weekend.
+						</li>
+					</ul>
+					<br />
+				</div>
+
+				<h6 class="text-md text-left">
+					<strong>DevOps Engineer - SouthWestern Business Corporation (SWBC) <span class="text-right">July &apos;21 - October &apos;25</span></strong>
+				</h6>
+				<div class="text-left text-base">
+					<p class="mb-0">
+						Led reliability, quality, and deployment engineering for a mature serverless platform in a
+						regulated financial services environment.
+					</p>
+					<br />
+					<ul class="mb-0 list-disc list-inside">
+						<li>
+							Built CDK, TypeScript, and Python automation that removed manual deployment steps across 12+
+							services and supported zero-downtime blue-green releases.
+						</li>
+						<li>
+							Owned QA strategy and quality gate enforcement, including code coverage standards and
+							SonarQube/Mend integration in CI pipelines.
+						</li>
+						<li>
+							Led the organization&apos;s migration from Azure DevOps to GitHub Actions, standardizing
+							deployment patterns across the enterprise.
+						</li>
+						<li>
+							Executed active intrusion containment during a critical vulnerability cycle and produced
+							compliance-grade post-incident documentation.
+						</li>
+						<li>
+							Mentored junior engineers and interns while leading retrospectives focused on systemic gap
+							removal rather than superficial fixes.
+						</li>
+					</ul>
+					<br />
+				</div>
+
+				<h6 class="text-md text-left">
+					<strong>CodeUp - San Antonio, TX <span class="text-right">November &apos;20 - July &apos;21</span></strong>
+				</h6>
+				<div class="text-left text-base">
+					<p class="mb-0">
+						A fully immersive, project-based full-stack Java career accelerator. It formalized the transition
+						into software delivery and provided the application-development vocabulary that now complements a
+						much longer background in operational leadership.
+					</p>
+				</div>
+
+				<br />
+				<hr class="featurette-divider" />
+				<br />
+				<h5><strong>Technical Focus</strong></h5>
+
+				<div class="flex flex-row justify-between flex-wrap basis-1/3 m-2">
+					<div class="px-1 m-1">AWS / Azure</div>
+					<div class="px-1 m-1">Terraform / CDK / CloudFormation</div>
+					<div class="px-1 m-1">GitHub Actions / GitLab CI / Azure DevOps / Jenkins</div>
+					<div class="px-1 m-1">Kubernetes / Helm / ArgoCD / Docker</div>
+					<div class="px-1 m-1">SLOs / SLIs / Incident Response / Runbooks</div>
+					<div class="px-1 m-1">Observability / Logging / Metrics / Latency Diagnostics</div>
+					<div class="px-1 m-1">Deterministic Integration Testing / Contract Testing</div>
+					<div class="px-1 m-1">Performance Benchmarking / Quality Gates / SonarQube / Mend</div>
+					<div class="px-1 m-1">Go / PowerShell / Bash / TypeScript / Python / .NET / SQL / Java</div>
+					<div class="px-1 m-1">Kafka / MSSQL / Aurora PostgreSQL / Snowflake</div>
+					<div class="px-1 m-1">AI Evaluation Workflows</div>
+					<div class="px-1 m-1">Claude Code / Copilot / Codex CLI</div>
+				</div>
+
+				<br />
+				<hr class="featurette-divider" />
+				<br />
+				<h5 class="mb-3"><strong>Military Experience: US Navy Lieutenant</strong></h5>
+				<div class="text-left text-base">
+					<p class="mb-0">
+						Engineering and training leadership aboard USS Leyte Gulf and USS Mahan in high-accountability
+						operational environments.
+					</p>
+					<br />
+					<ul class="mb-0 list-disc list-inside">
+						<li>
+							Owned the ship&apos;s Training Figure of Merit like a service level indicator, improving
+							readiness performance from 75% to 96% through gap analysis and corrective action.
+						</li>
+						<li>
+							Eliminated training and scheduling toil across a 200-person organization by creating ownership,
+							intake, and capacity management where none existed.
+						</li>
+						<li>
+							Completed four major readiness assessments that certified the ship as deployment-ready and
+							later helped train peer ships through qualification cycles.
+						</li>
+					</ul>
+				</div>
+
+				<br />
+				<h5 class="mb-3"><strong>Education / Certifications</strong></h5>
+				<div class="text-left">
+					<h6 class="hover:underline">
+						<strong
+							>United States Naval Academy, Annapolis, Maryland<br />
+							Bachelor of Science - Political Science - International Relations</strong
+						>
+					</h6>
+					<br />
+					<p class="mb-0"><strong>Additional Education:</strong> CodeUp Bootcamp - Full-stack development, Java and web development</p>
+					<br />
+					<div class="flex flex-row justify-around">
+						<a href="https://www.credly.com/badges/af4afb38-c817-461f-823f-64bf601f1dfb/public_url" target="_blank">
+							<img
+								src="https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+								alt="AWS Cloud Practitioner"
+								width="160"
+								height="160"
+							/>
+						</a>
+						<a href="https://www.credly.com/badges/fa4eab4d-a68a-420a-ae3e-b30343171083/public_url" target="_blank">
+							<img
+								src="https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
+								alt="AWS Certified Developer Associate"
+								width="160"
+								height="160"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

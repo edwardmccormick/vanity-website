@@ -1,0 +1,225 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="Ted McCormick | Principal AI Reliability & Quality Engineer"
+			description="Edward C. 'Ted' McCormick is a principal engineer focused on AI reliability, SRE, platform engineering, quality strategy, and modernization in regulated environments."
+		/>
+	</head>
+	<body class="min-h-screen">
+		<Header />
+		<main>
+			<div class="flex flex-col md:flex-row justify-center items-center max-w-7xl xl:mx-auto">
+				<div class="md:hidden">
+					<h1 class="text-4xl text-blue-900">Ted McCormick</h1>
+				</div>
+				<div class="m-4 w-96 box-content flex-none">
+					<img class="object-none rounded-lg" src="/img/tedProfilePicture.jpg" alt="A profile picture of Edward C. &quotTed&quot McCormick" />
+				</div>
+				<div class="m-1 p-6 text-center md:text-left flex-1">
+					<h1 class="text-4xl hidden md:inline text-blue-900">Ted McCormick</h1>
+					<h2 class="mt-3 text-lg font-semibold">Principal AI Reliability &amp; Quality Engineer</h2>
+					<p class="mt-3">
+						I build the systems, operating standards, and test infrastructure that let engineering teams ship
+						with confidence.
+					</p>
+					<p class="mt-3">
+						My work sits at the intersection of SRE, quality engineering, AI-enabled development, and legacy
+						modernization, with a bias toward pragmatic execution in regulated, high-consequence environments.
+					</p>
+				</div>
+			</div>
+
+			<div class="w-100 m-4">
+				<br />
+				<p class="m-4 p-4">
+					Use the site the way a hiring manager, engineering leader, or future collaborator would: review the
+					resume, read the technical writing, and skim the milestones below for the background behind the title.
+				</p>
+				<br />
+				<div
+					class="flex flex-col p-6 m-4 md:p-0 sm:grid-cols-2 sm:gap-3 sm:grid md:grid-cols-3 lg:grid-cols-4 md:gap-6 mx-auto container w-screen sm:min-h-[240vh] lg:min-h-screen grid-flow-row auto-rows-fr"
+				>
+					<div
+						id="dexter"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"
+						style="background-image: url(/img/Dexter_TownHall.JPG)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						data-toggle="tooltip"
+						data-placement="top"
+						title="This is where I was born and raised. Almost literally - this building used to be the town library before it was repurposed into City Hall, and I spent a *lot* of time there growing up."
+						alt="The City Administrative building of Dexter, Missouri, with a flag flying in front of it."
+					>
+						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">Dexter, Missouri</h3>
+							<p class="text-base my-2">
+								I was raised in southeast Missouri. Small-town life tends to wire in accountability early:
+								people know your name, your standards, and whether you follow through. That part stuck.
+							</p>
+						</div>
+					</div>
+
+					<div
+						id="usnagrad"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"
+						style="background-image: url(/img/AnnapolisGraduationcropped.jpg)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						aria-label="US Naval Academy Midshipmen Celebrating at Graduation in 2006 by throwing their hats in the air"
+						data-toggle="tooltip"
+						data-placement="top"
+						title="Unfortunately, none of these people are me. I was too busy celebrating to take a picture."
+						alt="Midshipmen of the US Naval Academy throwing their hats (covers) in the air at graduation."
+					>
+						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">US Naval Academy<br />Annapolis, MD</h3>
+							<p class="text-base my-2">
+								Four years in Annapolis gave me the operational foundation I still rely on: discipline,
+								standards, and composure under pressure. It also gave me a real engineering core behind a
+								political science degree.
+							</p>
+						</div>
+					</div>
+
+					<div
+						id="swo"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"
+						style="background-image: url(/img/USS-Mahan.jpg)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						aria-label="information goes here!"
+						data-toggle="tooltip"
+						data-placement="top"
+						title="I'm actually in this picture! Behind 1/2 inch of steel plate, standing watch in the Combat Information Center."
+						alt="USS Mahan, an Arleigh Burke class destroyer, returns to Norfolk, Virginia, after a deployment."
+					>
+						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">Surface Warfare Officer</h3>
+							<p class="text-base my-2">
+								I served six years as a Surface Warfare Officer, leading engineering and training programs in
+								operational environments where reliability was not a slogan. That mindset maps cleanly to
+								production engineering.
+							</p>
+						</div>
+					</div>
+
+					<div
+						id="family"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"
+						style="background-image: url(/img/family.jpg)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						aria-label="Ted and his family after his daughter's violin recital, standing in front of skysrapers in downtown San Antonio, TX."
+						data-toggle="tooltip"
+						data-placement="top"
+						title="Me, my beautiful wife, and our two amazing kids."
+						alt="A picture of Ted McCormick, his wife, and two kids in front of skyscrapers in downtown San Antonio."
+					>
+						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">Family Life</h3>
+							<p class="text-base my-2">
+								San Antonio became home after the Navy. Family has a way of clarifying priorities, which is
+								helpful when your job is separating signal from noise and investing effort where it matters.
+							</p>
+						</div>
+					</div>
+
+					<div
+						id="codeup"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"
+						style="background-image: url(/img/codeup.jpg)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						aria-label="The entrance and sign of Codeup, the coding bootcamp in San Antonio, TX, and Dallas, TX."
+						data-toggle="tooltip"
+						data-placement="top"
+						title="Confession - I've been into Codeup's San Antonio campus one time - to interview. But a picture of a Zoom call is less interesting."
+						alt="A view of the sign and door to Codeup, a coding bootcamp. This is the San Antonio, Texas, location."
+					>
+						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">Codeup</h3>
+							<p class="text-base my-2">
+								Codeup was the formal pivot into software, but not the start of technical leadership. It gave
+								me the software delivery vocabulary to pair with years of operational ownership.
+							</p>
+						</div>
+					</div>
+
+					<div
+						id="devops"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-contain rounded-lg bg-center bg-no-repeat"
+						style="background-image: url(/img/devops-infinity.png)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						aria-label="The DevOps continuous deployment infinity logo, representing the continuous integration/continuous deployment cycle."
+						data-toggle="tooltip"
+						data-placement="top"
+						title="We all know why you're here!"
+						alt="The DevOps infinite logo, showing the cycle of development/deployment/monitoring for software development."
+					>
+						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">DevOps</h3>
+							<p class="text-base my-2">
+								My platform work has expanded from deployment automation into reliability leadership, quality
+								gates, incident practice, and modernization strategy. The common thread is reducing risk while
+								increasing engineering throughput.
+							</p>
+						</div>
+					</div>
+
+					<div
+						id="usio"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-contain rounded-lg bg-center bg-no-repeat bg-white"
+						style="background-image: url(/img/cropped-USIO-Logo.png)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						aria-label="Usio brand tile"
+						data-toggle="tooltip"
+						data-placement="top"
+						title="Current chapter: building principal-level reliability and testability where there wasn't a dedicated SRE function before."
+						alt="Usio logo"
+					>
+						<div class="backdrop-blur-sm bg-white/70 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">Usio</h3>
+							<p class="text-base my-2">
+								At Usio, I built the first dedicated SRE function for a high-volume payments environment:
+								runbooks, blameless post-mortems, observability improvements, deterministic test infrastructure,
+								and a credible modernization path for a legacy authorization engine.
+							</p>
+						</div>
+					</div>
+
+					<div
+						id="swbc"
+						class="col-span-1 mb-6 text-center min-h-screen sm:min-h-0 bg-cover rounded-lg bg-center"
+						style="background-image: url(/img/swbc_lg.jpg)"
+						x-data="{ open: false }"
+						@click.self="open = ! open"
+						aria-label="The headquarters building of Southwestern Business Corporation in San Antonio, TX, on a clear, sunny day."
+						data-toggle="tooltip"
+						data-placement="top"
+						title="I've been to the Home Office exactly once. It was, and I'm not kidding, to return 'The Phoenix Project' to the Corporate Library. Yes, it was overdue!"
+						alt="The headquarters building of Southwestern Business Corporation in San Antonio, TX, on a clear, sunny day."
+					>
+						<div class="backdrop-blur-sm bg-white/60 w-full h-full min-h-screen sm:min-h-full" x-cloak x-show="open" x-transition @click="open = ! open">
+							<h3 class="text-lg font-semibold">SWBC</h3>
+							<p class="text-base my-2">
+								SWBC was where I matured from a career-transition engineer into someone trusted with enterprise
+								deployment patterns, security-sensitive incidents, QA strategy, and platform standards across
+								multiple teams.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

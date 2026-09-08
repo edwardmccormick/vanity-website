@@ -1,0 +1,199 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				display: flex;
+				flex-direction: column;
+				gap: 3rem;
+			}
+			.hero {
+				padding: 2rem 0 1rem;
+			}
+			.hero-copy {
+				max-width: 52rem;
+			}
+			.hero-kicker {
+				margin: 0 0 0.75rem;
+				font-size: 0.875rem;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: rgb(var(--accent));
+			}
+			.hero h1 {
+				margin: 0 0 1rem;
+				font-size: clamp(2.4rem, 5vw, 4rem);
+				line-height: 1.05;
+			}
+			.hero p {
+				margin: 0;
+				font-size: 1.05rem;
+				line-height: 1.7;
+				color: rgb(var(--gray));
+			}
+			.focus-areas {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75rem;
+				margin-top: 1.5rem;
+			}
+			.focus-areas button {
+				padding: 0.55rem 0.9rem;
+				border: 1px solid rgba(var(--gray), 0.25);
+				border-radius: 999px;
+				font-size: 0.95rem;
+				background: rgba(var(--accent), 0.08);
+				color: rgb(var(--black));
+				cursor: default;
+				transition:
+					background-color 0.2s ease,
+					border-color 0.2s ease,
+					color 0.2s ease,
+					box-shadow 0.2s ease,
+					transform 0.2s ease;
+			}
+			.focus-areas button:hover {
+				background: rgba(var(--accent), 0.18);
+				border-color: rgba(var(--accent), 0.45);
+				color: rgb(var(--accent));
+				box-shadow: 0 10px 20px rgba(var(--accent), 0.12);
+				transform: translateY(-1px);
+			}
+			.posts-heading {
+				margin: 0 0 1rem;
+				font-size: 1.5rem;
+			}
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul li {
+				width: calc(50% - 1rem);
+			}
+			ul li * {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+			ul li:first-child {
+				width: min(75%, 56rem);
+				margin-bottom: 1rem;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			ul li:first-child img {
+				width: 100%;
+			}
+			ul li:first-child .title {
+				font-size: 2.369rem;
+			}
+			ul li img {
+				margin-bottom: 0.5rem;
+				border-radius: 12px;
+			}
+			ul li a {
+				display: block;
+			}
+			.title {
+				margin: 0;
+				color: rgb(var(--black));
+				line-height: 1;
+			}
+			.date {
+				margin: 0;
+				color: rgb(var(--gray));
+			}
+			ul li a:hover h4,
+			ul li a:hover .date {
+				color: rgb(var(--accent));
+			}
+			ul a:hover img {
+				box-shadow: var(--box-shadow);
+			}
+			@media (max-width: 720px) {
+				main {
+					gap: 2rem;
+				}
+				.hero {
+					padding-top: 1rem;
+				}
+				ul {
+					gap: 0.5em;
+				}
+				ul li {
+					width: 100%;
+					text-align: center;
+				}
+				ul li:first-child {
+					margin-bottom: 0;
+				}
+				ul li:first-child .title {
+					font-size: 1.563em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero">
+				<div class="hero-copy">
+					<p class="hero-kicker">Principal Engineering Perspective</p>
+					<h1>Reliability, quality, and modernization for systems that have to work.</h1>
+					<p>
+						I write about building SRE discipline, hardening AI-enabled workflows, and modernizing legacy
+						platforms without hand-waving away production risk. The throughline is operational credibility:
+						clear standards, deterministic testing, and engineering decisions that hold up under pressure.
+					</p>
+					<div class="focus-areas">
+						<button type="button">SRE and incident practice</button>
+						<button type="button">AI reliability and evaluation</button>
+						<button type="button">Legacy modernization</button>
+						<button type="button">Platform and quality engineering</button>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2 class="posts-heading">Writing</h2>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.id}/`}>
+									{post.data.heroImage && (
+										<Image width={720} height={360} src={post.data.heroImage} alt="" />
+									)}
+									<h4 class="title">{post.data.title}</h4>
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
